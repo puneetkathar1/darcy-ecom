@@ -725,13 +725,8 @@ function Project() {
                     </a>
                   </Link>
                   <Link href="/About">
-                    <a style={{ right: "5rem" }} className="menu-button">
+                    <a style={{ right: "6rem" }} className="menu-button">
                       <h3>ABOUT</h3>
-                    </a>
-                  </Link>
-                  <Link href="/">
-                    <a style={{ right: "9.5rem" }} className="menu-button">
-                      <h3>WINE ARCHIVE</h3>
                     </a>
                   </Link>
                 </div>

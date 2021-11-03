@@ -807,11 +807,6 @@ function Project() {
                       <h3>ABOUT</h3>
                     </a>
                   </Link>
-                  <Link href="/">
-                    <a style={{ right: "9.5rem" }} className="menu-button">
-                      <h3>WINE ARCHIVE</h3>
-                    </a>
-                  </Link>
                 </div>
                 <div className="projects-list-wrapper fade-in">
                   <ul className="projects-list fade-in">
