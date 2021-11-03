@@ -62,7 +62,7 @@ const Cart = () => {
             </h2>
             <p className="mt-1 text-xl">
               Check out our awesome wines{' '}
-              <Link href="/">
+              <Link href="/Shop">
                 <a className="text-red-500 underline">here!</a>
               </Link>
             </p>
