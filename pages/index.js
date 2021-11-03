@@ -546,6 +546,7 @@ function index() {
                   style={{ width: "50%", margin: "auto", display: "none" }}
                 >
                   <Image
+                    placeholder="blur"
                     className="image"
                     height={540}
                     width={960}
@@ -557,6 +558,7 @@ function index() {
                   style={{ width: "50%", margin: "auto", display: "none" }}
                 >
                   <Image
+                    placeholder="blur"
                     className="image"
                     height={540}
                     width={960}
@@ -568,6 +570,7 @@ function index() {
                   style={{ width: "50%", margin: "auto", display: "none" }}
                 >
                   <Image
+                    placeholder="blur"
                     className="image"
                     height={540}
                     width={960}

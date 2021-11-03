@@ -684,6 +684,7 @@ function Project() {
                     <div className="col-xs-12 col-lg-6 col-lg-offset-2">
                       <figure className="responsive-image">
                         <Image
+                          placeholder="blur"
                           layout="responsive"
                           src={DPSHIRAZ_SQUARE}
                           width={960}
@@ -720,6 +721,7 @@ function Project() {
                     <div className="col-xs-12 col-lg-6 col-lg-offset-2">
                       <figure className="responsive-image">
                         <Image
+                          placeholder="blur"
                           layout="responsive"
                           src={DP20_05}
                           width={960}
@@ -733,6 +735,7 @@ function Project() {
                     <div className="col-xs-12 col-lg-6 col-lg-offset-2">
                       <figure className="responsive-image">
                         <Image
+                          placeholder="blur"
                           layout="responsive"
                           src={DP20_01}
                           width={960}
@@ -746,6 +749,7 @@ function Project() {
                     <div className="col-xs-12 col-lg-6 col-lg-offset-2">
                       <figure className="responsive-image">
                         <Image
+                          placeholder="blur"
                           layout="responsive"
                           src={DP20_02}
                           width={960}
@@ -759,6 +763,7 @@ function Project() {
                     <div className="col-xs-12 col-lg-6 col-lg-offset-2">
                       <figure className="responsive-image">
                         <Image
+                          placeholder="blur"
                           layout="responsive"
                           src={DP20_03}
                           width={960}
@@ -772,6 +777,7 @@ function Project() {
                     <div className="col-xs-12 col-lg-6 col-lg-offset-2">
                       <figure className="responsive-image">
                         <Image
+                          placeholder="blur"
                           layout="responsive"
                           src={DP20_04}
                           width={960}
@@ -785,6 +791,7 @@ function Project() {
                     <div className="col-xs-12 col-lg-6 col-lg-offset-2">
                       <figure className="responsive-image">
                         <Image
+                          placeholder="blur"
                           layout="responsive"
                           src={DP20_06}
                           width={960}
@@ -798,6 +805,7 @@ function Project() {
                     <div className="col-xs-12 col-lg-6 col-lg-offset-2">
                       <figure className="responsive-image">
                         <Image
+                          placeholder="blur"
                           layout="responsive"
                           src={DP20_07}
                           width={960}
@@ -811,6 +819,7 @@ function Project() {
                     <div className="col-xs-12 col-lg-6 col-lg-offset-2">
                       <figure className="responsive-image">
                         <Image
+                          placeholder="blur"
                           layout="responsive"
                           src={DP20_09}
                           width={960}
@@ -824,6 +833,7 @@ function Project() {
                     <div className="col-xs-12 col-lg-6 col-lg-offset-2">
                       <figure className="responsive-image">
                         <Image
+                          placeholder="blur"
                           layout="responsive"
                           src={DP20_08}
                           width={960}

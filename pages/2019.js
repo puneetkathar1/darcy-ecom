@@ -676,6 +676,7 @@ function Project() {
                     <div className="col-xs-12 col-lg-6 col-lg-offset-2">
                       <figure className="responsive-image">
                         <Image
+                          placeholder="blur"
                           layout="responsive"
                           src={DPSHIRAZ_SQUARE}
                           width={960}
@@ -702,6 +703,7 @@ function Project() {
                     <div className="col-xs-12 col-lg-6 col-lg-offset-2">
                       <figure className="responsive-image">
                         <Image
+                          placeholder="blur"
                           layout="responsive"
                           src={DP19_01}
                           width={960}

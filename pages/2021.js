@@ -680,6 +680,7 @@ function Project() {
                     <div className="col-xs-12 col-lg-6 col-lg-offset-2">
                       <figure className="responsive-image">
                         <Image
+                          placeholder="blur"
                           layout="responsive"
                           src={DPSHIRAZ_SQUARE}
                           width={960}
@@ -715,6 +716,7 @@ function Project() {
                     <div className="col-xs-12 col-lg-6 col-lg-offset-2">
                       <figure className="responsive-image">
                         <Image
+                          placeholder="blur"
                           layout="responsive"
                           src={DP_02}
                           width={960}
@@ -728,6 +730,7 @@ function Project() {
                     <div className="col-xs-12 col-lg-6 col-lg-offset-2">
                       <figure className="responsive-image">
                         <Image
+                          placeholder="blur"
                           layout="responsive"
                           src={DP_01}
                           width={960}
@@ -741,6 +744,7 @@ function Project() {
                     <div className="col-xs-12 col-lg-6 col-lg-offset-2">
                       <figure className="responsive-image">
                         <Image
+                          placeholder="blur"
                           layout="responsive"
                           src={DP_05}
                           width={960}
@@ -754,6 +758,7 @@ function Project() {
                     <div className="col-xs-12 col-lg-6 col-lg-offset-2">
                       <figure className="responsive-image">
                         <Image
+                          placeholder="blur"
                           layout="responsive"
                           src={DP_03}
                           width={960}
@@ -767,6 +772,7 @@ function Project() {
                     <div className="col-xs-12 col-lg-6 col-lg-offset-2">
                       <figure className="responsive-image">
                         <Image
+                          placeholder="blur"
                           layout="responsive"
                           src={DP_04}
                           width={960}
@@ -780,6 +786,7 @@ function Project() {
                     <div className="col-xs-12 col-lg-6 col-lg-offset-2">
                       <figure className="responsive-image">
                         <Image
+                          placeholder="blur"
                           layout="responsive"
                           src={DP_06}
                           width={960}

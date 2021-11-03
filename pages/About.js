@@ -438,7 +438,12 @@ function About() {
                 and working in Melbourne
               </h1>
               <div className="about-image">
-                <Image height={400} width={340} src={darcy} />
+                <Image
+                  placeholder="blur"
+                  height={400}
+                  width={340}
+                  src={darcy}
+                />
               </div>
               <footer>
                 <div className="footer__text">
