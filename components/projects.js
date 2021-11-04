@@ -528,14 +528,9 @@ function projects() {
         <div className="menu-item menu-item--portfolio expanded">
           <div className="menu-item__sticky-header menu-item__sticky-header--closed">
             <h2 className="margin-0">Wine Archive</h2>
-            <Link href="/Shop">
+            <Link href="/">
               <a className="menu-button">
-                <h3>SHOP</h3>
-              </a>
-            </Link>
-            <Link href="/About">
-              <a style={{ right: "6rem" }} className="menu-button">
-                <h3>ABOUT</h3>
+                <h3>MENU</h3>
               </a>
             </Link>
           </div>

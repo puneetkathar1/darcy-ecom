@@ -804,16 +804,11 @@ function Project() {
               <div className="menu-item menu-item--portfolio expanded">
                 <div className="menu-item__sticky-header menu-item__sticky-header--closed">
                   <h2 className="margin-0">Wine Archive</h2>
-                  <Link href="/Shop">
-                    <a className="menu-button">
-                      <h3>SHOP</h3>
-                    </a>
-                  </Link>
-                  <Link href="/About">
-                    <a style={{ right: "5rem" }} className="menu-button">
-                      <h3>ABOUT</h3>
-                    </a>
-                  </Link>
+                  <Link href="/">
+              <a className="menu-button">
+                <h3>MENU</h3>
+              </a>
+            </Link>
                 </div>
                 <div className="projects-list-wrapper fade-in">
                   <ul className="projects-list fade-in">

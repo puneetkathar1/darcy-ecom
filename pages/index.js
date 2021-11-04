@@ -1,10 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import Projects from "../components/projects";
-import img1 from "../public/21DPSHIRAZ_SQUARE.png";
-import img2 from "../public/20SHIRAZ_SQUARE.png";
-import img3 from "../public/19SHIRAZ_SQUARE.png";
-function index() {
+import Link from 'next/link'
+import darcy from "../public/autoportraitdarcy.png";
+function home() {
   return (
     <div id="mount-point">
       <style jsx>{`
@@ -30,19 +28,6 @@ function index() {
             flex-grow: 1;
           }
         }
-        .hover-image.Center {
-          justify-content: center;
-        }
-        .hover-image.Middle {
-          align-items: center;
-        }
-        .hover-image {
-          display: flex;
-          flex: 0 1 100%;
-          box-sizing: border-box;
-          overflow: hidden;
-        }
-
         .content-container a {
           text-decoration: underline;
         }
@@ -95,6 +80,49 @@ function index() {
         .footer__text a {
           text-decoration: none;
         }
+        .homepage-image-container {
+          box-sizing: border-box;
+          display: flex;
+          flex-direction: column;
+          font-size: 0;
+          justify-content: center;
+          flex: 0 999 auto;
+        }
+        @media (orientation: portrait) {
+          .homepage-image-container {
+            display: none;
+          }
+        }
+        .homepage-image-grid-container {
+          box-sizing: border-box;
+          max-height: 100%;
+          overflow: hidden;
+        }
+        @media (orientation: portrait) {
+          .homepage-image-grid-container {
+            max-height: 25vh;
+            padding: 0 2vh;
+          }
+        }
+        @media (orientation: landscape) {
+          .homepage-image-grid-container {
+            padding: 0 1.5vw;
+          }
+        }
+        .homepage-image-row {
+          max-height: 100%;
+        }
+        .homepage-image {
+          -o-object-fit: contain;
+          object-fit: contain;
+          width: 100%;
+          max-height: 66vh;
+        }
+        @media (orientation: portrait) {
+          .homepage-image {
+            max-height: 25vh;
+          }
+        }
         .default-view {
           display: flex;
           flex-direction: column;
@@ -121,8 +149,6 @@ function index() {
         }
         @media (orientation: landscape) {
           .main-menu {
-            margin-top: -66.7vh;
-            height: auto;
             flex-grow: 1;
           }
         }
@@ -157,13 +183,6 @@ function index() {
           .menu-item {
             flex-grow: 1;
           }
-          .menu-item.expanded {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: calc(100vh - var(--vh-offset, 0px));
-            z-index: 200;
-          }
         }
         .menu-item--closed {
           cursor: pointer;
@@ -175,168 +194,13 @@ function index() {
           }
         }
         .menu-item--portfolio {
-          background: #e9b000;
-        }
-        .menu-item--portfolio.expanded {
-          display: flex;
-          flex-direction: column;
-        }
-        @media (orientation: landscape) {
-          .menu-item--portfolio.expanded {
-            -webkit-animation: expand-portfolio 0.2s ease forwards;
-            animation: expand-portfolio 0.2s ease forwards;
-          }
+          background: #00a560;
         }
         .menu-item--about {
           background: #d7771a;
         }
         .menu-item--journal {
           background: #539dcc;
-        }
-        .menu-item__sticky-header {
-          background: inherit;
-          box-sizing: border-box;
-          padding: 1.5vw;
-        }
-        @media (orientation: portrait) {
-          .menu-item__sticky-header {
-            padding: 2vh;
-          }
-        }
-        a.menu-button {
-          position: absolute;
-        }
-        a.menu-button h3 {
-          margin: 0;
-        }
-        @media (orientation: portrait) {
-          a.menu-button {
-            top: 2vh;
-            right: 2vh;
-          }
-        }
-        @media (orientation: landscape) {
-          a.menu-button {
-            top: 1.5vw;
-            right: 1.5vw;
-          }
-        }
-        .projects-list-wrapper {
-          box-sizing: border-box;
-          display: flex;
-          flex: 1 1;
-          flex-direction: column;
-          justify-content: space-between;
-          overflow-y: scroll;
-          overflow-x: hidden;
-          line-height: 0;
-          font-size: 0;
-        }
-        ul.projects-list {
-          box-sizing: border-box;
-          font-size: calc(18.93333px + 0.26667vw);
-          list-style-type: none;
-          margin: 0;
-          padding: 1.5vw 1.5vw 0;
-          flex: 1 1 auto;
-        }
-        @media (orientation: portrait) {
-          ul.projects-list {
-            padding: 2vh;
-          }
-        }
-        ul.projects-list li:first-child {
-          margin-top: 4.5vw;
-        }
-        @media (orientation: portrait) {
-          ul.projects-list li:first-child {
-            margin-top: 6vh;
-          }
-        }
-        ul.projects-list li {
-          box-sizing: border-box;
-        }
-        @media (orientation: landscape) {
-          ul.projects-list li {
-            max-width: calc(30vw - 60px);
-          }
-          ul.projects-list li:hover {
-            max-width: calc(30vw - 90px);
-          }
-        }
-        ul.projects-list li a {
-          color: #000;
-          padding-bottom: 1.1em;
-        }
-        .categories-filter-row,
-        ul.projects-list li a {
-          box-sizing: border-box;
-          font-family: Leitura, serif;
-          font-size: calc(18.93333px + 0.26667vw);
-          line-height: 1.25;
-        }
-        .categories-filter-row {
-          font-style: normal;
-          font-weight: 400;
-          margin: 0;
-          font-size: calc(15.46667px + 0.13333vw);
-          font-family: Basis Grotesque, sans-serif;
-          line-height: 1;
-          display: flex;
-          align-items: center;
-          flex: 0 1 auto;
-          justify-content: flex-start;
-          width: 100%;
-          min-height: calc(46.40001px + 0.4vw);
-          padding-left: 1.5vw;
-          background: #fdddc0;
-        }
-        @media (orientation: portrait) {
-          .categories-filter-row {
-            padding-left: 2vh;
-          }
-        }
-        .category-selector {
-          white-space: nowrap;
-          cursor: pointer;
-          margin-right: 1.5vw;
-        }
-        @media (orientation: portrait) {
-          .category-selector {
-            line-height: 2;
-            margin-right: 2vh;
-          }
-        }
-        .category-selector input[type="checkbox"] {
-          -webkit-appearance: none;
-          -moz-appearance: none;
-          appearance: none;
-          line-height: 0;
-          height: 0;
-          width: 0;
-        }
-        .category-selector
-          input[type="checkbox"]:checked
-          + label
-          .circle-check {
-          background: #000;
-          line-height: 0;
-        }
-        .category-selector label {
-          line-height: 1;
-          display: inline-flex;
-          align-items: center;
-          cursor: pointer;
-        }
-        .category-selector .circle-check {
-          box-sizing: border-box;
-          display: inline-block;
-          margin-right: 0.4em;
-          border: 1px solid #000;
-          border-radius: 50%;
-          height: 1em;
-          width: 1em;
-          line-height: 1;
         }
         .circle-link-container:hover .circle-link__link {
           margin-left: -1em;
@@ -381,6 +245,22 @@ function index() {
             flex-direction: column;
           }
         }
+        .container-fluid {
+          margin-right: auto;
+          margin-left: auto;
+        }
+        .col-xs-8,
+        .col-xs-offset-2 {
+          box-sizing: border-box;
+          flex: 0 0 auto;
+        }
+        .col-xs-8 {
+          flex-basis: 66.66666667%;
+          max-width: 66.66666667%;
+        }
+        .col-xs-offset-2 {
+          margin-left: 16.66666667%;
+        }
         body {
           margin: 0;
         }
@@ -394,22 +274,8 @@ function index() {
         a {
           background-color: transparent;
         }
-        input {
-          font-family: inherit;
-          font-size: 100%;
-          line-height: 1.15;
-          margin: 0;
-        }
-        input {
-          overflow: visible;
-        }
-        [type="checkbox"] {
-          box-sizing: border-box;
-          padding: 0;
-        }
-        .fade-in {
-          -webkit-animation: fade-in 1s;
-          animation: fade-in 1s;
+        img {
+          border-style: none;
         }
         h1 {
           font-family: Leitura, serif;
@@ -421,10 +287,6 @@ function index() {
         h1.indented {
           text-indent: 52px;
         }
-        h2 {
-          font-size: calc(16.4px + 0.4vw);
-        }
-        h2,
         h3 {
           font-family: Basis Grotesque, sans-serif;
           font-style: normal;
@@ -455,9 +317,6 @@ function index() {
           color: #000;
           text-decoration: none;
         }
-        ul {
-          list-style-type: none;
-        }
         .margin-0 {
           margin: 0;
         }
@@ -465,52 +324,9 @@ function index() {
           width: 0;
           background: transparent;
         }
-        /*! CSS Used keyframes */
-        @-webkit-keyframes expand-portfolio {
-          0% {
-            margin-top: 0;
-            height: 33.33333vh;
-            max-height: 33.33333vh;
-          }
-          to {
-            margin-top: 66.66667vh;
-            height: 100vh;
-            max-height: 100vh;
-          }
-        }
-        @keyframes expand-portfolio {
-          0% {
-            margin-top: 0;
-            height: 33.33333vh;
-            max-height: 33.33333vh;
-          }
-          to {
-            margin-top: 66.66667vh;
-            height: 100vh;
-            max-height: 100vh;
-          }
-        }
-        @-webkit-keyframes fade-in {
-          0% {
-            opacity: 0;
-          }
-          25% {
-            opacity: 0;
-          }
-          to {
-            opacity: 1;
-          }
-        }
-        @keyframes fade-in {
-          0% {
-            opacity: 0;
-          }
-          25% {
-            opacity: 0;
-          }
-          to {
-            opacity: 1;
-          }
+        .container-fluid {
+          padding: 0;
+          margin: 0;
         }
         /*! CSS Used fontfaces */
         @font-face {
@@ -530,67 +346,68 @@ function index() {
       `}</style>
       <div className="app">
         <main className="content-container ">
-          <div
-            tabIndex={-1}
-            className="content-container__router"
-            style={{ outline: "none" }}
-          >
+          <div tabIndex={-1} className="content-container__router" style={{outline: 'none'}}>
             <div className="default-view">
               <h1 className="default-heading indented margin-0">
-                Darcy Muller is a creative content and brand specialist living
-                and working in Melbourne
+              POOL is a wine label based on Taungurung country in Kyneton.
               </h1>
-              <div className="hover-image Middle Center">
-                <div
-                  id="2021"
-                  style={{ width: "50%", margin: "auto", display: "none" }}
-                >
+              <div className="homepage-image-container">
+                <div className="homepage-image-grid-container container-fluid">
+                  <div className="homepage-image-row col-xs-8 col-xs-offset-2">
                   <Image
-                    placeholder="blur"
-                    className="image"
-                    height={540}
-                    width={960}
-                    src={img1}
-                  />
-                </div>
-                <div
-                  id="2020"
-                  style={{ width: "50%", margin: "auto", display: "none" }}
-                >
-                  <Image
-                    placeholder="blur"
-                    className="image"
-                    height={540}
-                    width={960}
-                    src={img2}
-                  />
-                </div>
-                <div
-                  id="2019"
-                  style={{ width: "50%", margin: "auto", display: "none" }}
-                >
-                  <Image
-                    placeholder="blur"
-                    className="image"
-                    height={540}
-                    width={960}
-                    src={img3}
-                  />
+                  placeholder="blur"
+                  height={300}
+                  width={480}
+                  src={darcy}
+                />
+                  </div>
                 </div>
               </div>
               <footer>
                 <div className="footer__text">
-                  <h3>Email : darcyhmuller@gmail.com</h3>
-                  <h3>Phone : 0419 045 241</h3>
+                  <h3>
+                    <a href="mailto:poolwines@gmail.com">Email : poolwines@gmail.com</a>
+                  </h3>
+                  <h3>
+                    <Link href="https://www.instagram.com/poolwines/"><a>Insta - @poolwines</a></Link>
+                  </h3>
                 </div>
               </footer>
             </div>
           </div>
         </main>
-        <Projects />
+        <nav className="main-menu" role="navigation">
+          <div className="menu-item-container">
+            <div className="menu-item menu-item--portfolio menu-item--closed circle-link-container">
+              <div className="circle-link">
+                <a className="circle-link__link" href="/WineArchive">
+                  Wine Archive
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="menu-item-container">
+            <div className="menu-item menu-item--about menu-item--closed circle-link-container">
+              <div className="circle-link">
+                <a className="circle-link__link" href="/Shop">
+                  Shop
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="menu-item-container">
+            <div className="menu-item menu-item--journal menu-item--closed circle-link-container">
+              <div className="circle-link">
+                <a className="circle-link__link" href="/About">
+                  About
+                </a>
+              </div>
+            </div>
+          </div>
+        </nav>
       </div>
     </div>
   );
 }
 
-export default index;
+export default home;

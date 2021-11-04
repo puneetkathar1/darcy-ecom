@@ -1,8 +1,10 @@
 import React from "react";
-import Link from "next/link";
 import Image from "next/image";
-import darcy from "../public/autoportraitdarcy.png";
-function About() {
+import Projects from "../components/projects";
+import img1 from "../public/21DPSHIRAZ_SQUARE.png";
+import img2 from "../public/20SHIRAZ_SQUARE.png";
+import img3 from "../public/19SHIRAZ_SQUARE.png";
+function index() {
   return (
     <div id="mount-point">
       <style jsx>{`
@@ -28,6 +30,19 @@ function About() {
             flex-grow: 1;
           }
         }
+        .hover-image.Center {
+          justify-content: center;
+        }
+        .hover-image.Middle {
+          align-items: center;
+        }
+        .hover-image {
+          display: flex;
+          flex: 0 1 100%;
+          box-sizing: border-box;
+          overflow: hidden;
+        }
+
         .content-container a {
           text-decoration: underline;
         }
@@ -37,35 +52,6 @@ function About() {
         .content-container__router {
           display: flex;
           height: 100%;
-        }
-        .about-image-container {
-          display: flex;
-          flex-direction: column;
-          justify-content: stretch;
-          flex: 1 1;
-          height: 100vh;
-        }
-        .about-image,
-        .about-image-container {
-          box-sizing: border-box;
-          max-width: 100%;
-          overflow: hidden;
-        }
-        .about-image {
-          flex: 2 1 auto;
-          text-align: right;
-          padding-top: 1.5vw;
-          padding-right: 1.5vw;
-        }
-        @media (orientation: portrait) {
-          .about-image {
-            padding-top: 2vh;
-            padding-right: 2vh;
-          }
-        }
-        .about-image img {
-          max-width: 66%;
-          max-height: 100%;
         }
         .default-heading {
           box-sizing: border-box;
@@ -109,6 +95,21 @@ function About() {
         .footer__text a {
           text-decoration: none;
         }
+        .default-view {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+        @media (orientation: portrait) {
+          .default-view {
+            flex: 1 1 50vh;
+          }
+        }
+        @media (orientation: landscape) {
+          .default-view {
+            flex: 1 1;
+          }
+        }
         .main-menu {
           display: flex;
           flex-direction: column;
@@ -120,7 +121,7 @@ function About() {
         }
         @media (orientation: landscape) {
           .main-menu {
-            margin-top: -33.5vh;
+            margin-top: -66.7vh;
             height: auto;
             flex-grow: 1;
           }
@@ -174,22 +175,20 @@ function About() {
           }
         }
         .menu-item--portfolio {
-          background: #00a560;
+          background: #e9b000;
         }
-        .menu-item--about {
-          background: #17aae8;
-        }
-        .menu-item--about.expanded {
+        .menu-item--portfolio.expanded {
           display: flex;
           flex-direction: column;
-          justify-content: center;
         }
         @media (orientation: landscape) {
-          .menu-item--about.expanded {
-            max-width: 50vw;
-            -webkit-animation: expand-about 0.2s ease forwards;
-            animation: expand-about 0.2s ease forwards;
+          .menu-item--portfolio.expanded {
+            -webkit-animation: expand-portfolio 0.2s ease forwards;
+            animation: expand-portfolio 0.2s ease forwards;
           }
+        }
+        .menu-item--about {
+          background: #d7771a;
         }
         .menu-item--journal {
           background: #539dcc;
@@ -222,6 +221,123 @@ function About() {
             right: 1.5vw;
           }
         }
+        .projects-list-wrapper {
+          box-sizing: border-box;
+          display: flex;
+          flex: 1 1;
+          flex-direction: column;
+          justify-content: space-between;
+          overflow-y: scroll;
+          overflow-x: hidden;
+          line-height: 0;
+          font-size: 0;
+        }
+        ul.projects-list {
+          box-sizing: border-box;
+          font-size: calc(18.93333px + 0.26667vw);
+          list-style-type: none;
+          margin: 0;
+          padding: 1.5vw 1.5vw 0;
+          flex: 1 1 auto;
+        }
+        @media (orientation: portrait) {
+          ul.projects-list {
+            padding: 2vh;
+          }
+        }
+        ul.projects-list li:first-child {
+          margin-top: 4.5vw;
+        }
+        @media (orientation: portrait) {
+          ul.projects-list li:first-child {
+            margin-top: 6vh;
+          }
+        }
+        ul.projects-list li {
+          box-sizing: border-box;
+        }
+        @media (orientation: landscape) {
+          ul.projects-list li {
+            max-width: calc(30vw - 60px);
+          }
+          ul.projects-list li:hover {
+            max-width: calc(30vw - 90px);
+          }
+        }
+        ul.projects-list li a {
+          color: #000;
+          padding-bottom: 1.1em;
+        }
+        .categories-filter-row,
+        ul.projects-list li a {
+          box-sizing: border-box;
+          font-family: Leitura, serif;
+          font-size: calc(18.93333px + 0.26667vw);
+          line-height: 1.25;
+        }
+        .categories-filter-row {
+          font-style: normal;
+          font-weight: 400;
+          margin: 0;
+          font-size: calc(15.46667px + 0.13333vw);
+          font-family: Basis Grotesque, sans-serif;
+          line-height: 1;
+          display: flex;
+          align-items: center;
+          flex: 0 1 auto;
+          justify-content: flex-start;
+          width: 100%;
+          min-height: calc(46.40001px + 0.4vw);
+          padding-left: 1.5vw;
+          background: #fdddc0;
+        }
+        @media (orientation: portrait) {
+          .categories-filter-row {
+            padding-left: 2vh;
+          }
+        }
+        .category-selector {
+          white-space: nowrap;
+          cursor: pointer;
+          margin-right: 1.5vw;
+        }
+        @media (orientation: portrait) {
+          .category-selector {
+            line-height: 2;
+            margin-right: 2vh;
+          }
+        }
+        .category-selector input[type="checkbox"] {
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          line-height: 0;
+          height: 0;
+          width: 0;
+        }
+        .category-selector
+          input[type="checkbox"]:checked
+          + label
+          .circle-check {
+          background: #000;
+          line-height: 0;
+        }
+        .category-selector label {
+          line-height: 1;
+          display: inline-flex;
+          align-items: center;
+          cursor: pointer;
+        }
+        .category-selector .circle-check {
+          box-sizing: border-box;
+          display: inline-block;
+          margin-right: 0.4em;
+          border: 1px solid #000;
+          border-radius: 50%;
+          height: 1em;
+          width: 1em;
+          line-height: 1;
+        }
         .circle-link-container:hover .circle-link__link {
           margin-left: -1em;
           transform: translateX(1em);
@@ -245,44 +361,6 @@ function About() {
         .circle-link__link {
           display: inline-block;
           transition: transform 0.2s ease;
-        }
-        .about-page {
-          box-sizing: border-box;
-          width: 100%;
-          max-width: 100%;
-          overflow: auto;
-          flex: 0 1 100%;
-          padding: 12vw 1.5vw 4.5vw;
-        }
-        @media (orientation: portrait) {
-          .about-page {
-            padding: 16vh 2vh 6vh;
-          }
-        }
-        .about-page hr {
-          margin-top: 3vw;
-          margin-bottom: 1.5vw;
-        }
-        .about-page hr:first-child {
-          margin-top: 0;
-        }
-        @media (orientation: portrait) {
-          .about-page hr {
-            margin-top: 4vh;
-            margin-bottom: 2vh;
-          }
-        }
-        .about-page p {
-          padding-right: 1.5vw;
-        }
-        @media (orientation: portrait) {
-          .about-page p {
-            padding-right: 2vh;
-            max-width: 30em;
-          }
-        }
-        .about-page a {
-          text-decoration: underline;
         }
         .app {
           display: flex;
@@ -313,16 +391,25 @@ function About() {
           font-size: 2em;
           margin: 0.67em 0;
         }
-        hr {
-          box-sizing: content-box;
-          height: 0;
-          overflow: visible;
-        }
         a {
           background-color: transparent;
         }
-        img {
-          border-style: none;
+        input {
+          font-family: inherit;
+          font-size: 100%;
+          line-height: 1.15;
+          margin: 0;
+        }
+        input {
+          overflow: visible;
+        }
+        [type="checkbox"] {
+          box-sizing: border-box;
+          padding: 0;
+        }
+        .fade-in {
+          -webkit-animation: fade-in 1s;
+          animation: fade-in 1s;
         }
         h1 {
           font-family: Leitura, serif;
@@ -349,16 +436,6 @@ function About() {
         h3 {
           line-height: 1.2em;
         }
-        p {
-          font-weight: 400;
-        }
-        p {
-          font-family: Leitura, serif;
-          font-size: calc(18.93333px + 0.26667vw);
-          line-height: 1.25;
-          font-style: normal;
-          margin: 0;
-        }
         html * {
           box-sizing: border-box;
         }
@@ -378,8 +455,8 @@ function About() {
           color: #000;
           text-decoration: none;
         }
-        hr {
-          border: 0.5px solid #000;
+        ul {
+          list-style-type: none;
         }
         .margin-0 {
           margin: 0;
@@ -389,24 +466,50 @@ function About() {
           background: transparent;
         }
         /*! CSS Used keyframes */
-        @-webkit-keyframes expand-about {
+        @-webkit-keyframes expand-portfolio {
           0% {
+            margin-top: 0;
             height: 33.33333vh;
             max-height: 33.33333vh;
           }
           to {
+            margin-top: 66.66667vh;
             height: 100vh;
             max-height: 100vh;
           }
         }
-        @keyframes expand-about {
+        @keyframes expand-portfolio {
           0% {
+            margin-top: 0;
             height: 33.33333vh;
             max-height: 33.33333vh;
           }
           to {
+            margin-top: 66.66667vh;
             height: 100vh;
             max-height: 100vh;
+          }
+        }
+        @-webkit-keyframes fade-in {
+          0% {
+            opacity: 0;
+          }
+          25% {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+        @keyframes fade-in {
+          0% {
+            opacity: 0;
+          }
+          25% {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
           }
         }
         /*! CSS Used fontfaces */
@@ -432,106 +535,61 @@ function About() {
             className="content-container__router"
             style={{ outline: "none" }}
           >
-            <div className="about-image-container">
+            <div className="default-view">
               <h1 className="default-heading indented margin-0">
-                POOL is a wine label based on Taungurung country in Kyneton.
+              POOL is a wine label based on Taungurung country in Kyneton.
               </h1>
-              <div className="about-image">
-                <Image
-                  placeholder="blur"
-                  height={300}
-                  width={480}
-                  src={darcy}
-                />
+              <div className="hover-image Middle Center">
+                <div
+                  id="2021"
+                  style={{ width: "50%", margin: "auto", display: "none" }}
+                >
+                  <Image
+                    placeholder="blur"
+                    className="image"
+                    height={540}
+                    width={960}
+                    src={img1}
+                  />
+                </div>
+                <div
+                  id="2020"
+                  style={{ width: "50%", margin: "auto", display: "none" }}
+                >
+                  <Image
+                    placeholder="blur"
+                    className="image"
+                    height={540}
+                    width={960}
+                    src={img2}
+                  />
+                </div>
+                <div
+                  id="2019"
+                  style={{ width: "50%", margin: "auto", display: "none" }}
+                >
+                  <Image
+                    placeholder="blur"
+                    className="image"
+                    height={540}
+                    width={960}
+                    src={img3}
+                  />
+                </div>
               </div>
               <footer>
                 <div className="footer__text">
-                  <h3>
-                    <a href="mailto:poolwines@gmail.com">
-                      Email : poolwines@gmail.com
-                    </a>
-                  </h3>
-                  <h3>
-                    <Link href="https://www.instagram.com/poolwines/">
-                      <a>Insta - @poolwines</a>
-                    </Link>
-                  </h3>
+                  <h3>Email : darcyhmuller@gmail.com</h3>
+                  <h3>Phone : 0419 045 241</h3>
                 </div>
               </footer>
             </div>
           </div>
         </main>
-        <nav className="main-menu" role="navigation">
-          <div className="menu-item-container">
-            <div className="menu-item menu-item--portfolio menu-item--closed circle-link-container">
-              <div className="circle-link">
-                <a className="circle-link__link" href="/about/portfolio">
-                  Wine Archive
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="menu-item-container">
-            <div className="menu-item menu-item--about expanded">
-              <div className="menu-item__sticky-header menu-item__sticky-header--closed">
-                <h2 className="margin-0">About</h2>
-                <Link href="/">
-                  <a className="menu-button">
-                    <h3>MENU</h3>
-                  </a>
-                </Link>
-              </div>
-              <div className="about-page">
-                <hr />
-                <h2>Contact</h2>
-                <p>
-                  <a href="mailto:poolwines@gmail.com">
-                    Email : poolwines@gmail.com
-                  </a>
-                  <br />
-                  <Link href="https://www.instagram.com/poolwines/">
-                    <a>Insta - @poolwines</a>
-                  </Link>
-                </p>
-                <hr />
-                <h2>Bio</h2>
-                <p>
-                  POOL is Tim, Al, Ed & Darcy. We are based in Taungurung
-                  Country, in Kyneton.
-                  <br />
-                  <br />
-                  POOL had it’s first vintage in 2019 and we continue to expand
-                  and grow our repertoire with each season. We work with local
-                  growers and vineyards to source grapes that have been grown in
-                  a way that is responsible to the land – reducing the use of
-                  sprays and interference and then hand-picking with our friends
-                  where we can.
-                  <br />
-                  <br />
-                  In the winery we use no additive of any kind, we don’t fine or
-                  filter and prefer to use hand tools and processes where we
-                  can.
-                </p>
-                <hr />
-                <h2>Legal</h2>
-                <p>
-                  POOL Wines Pty. Ltd.
-                  <br />
-                  <br />
-                  It is against the law to sell or supply alcohol to, or to
-                  obtain alcohol on behalf of, a person under the age of 18
-                  years.
-                  <br />
-                  <br />
-                  Liquor License Vic 33777973
-                </p>
-              </div>
-            </div>
-          </div>
-        </nav>
+        <Projects />
       </div>
     </div>
   );
 }
 
-export default About;
+export default index;

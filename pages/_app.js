@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <CartProvider>
         <div className="min-h-screen flex flex-col">
-          <main className="flex-grow">
+          <main style={{backgroundColor: '#FAF5EB'}} className="flex-grow">
             <Component {...pageProps} />
           </main>
         </div>
