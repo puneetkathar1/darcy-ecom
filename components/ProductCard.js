@@ -45,7 +45,7 @@ const ProductCard = props => {
   }, [cartCount]);
 
   return (
-    <Link href={`/products/1`}>
+    <Link href={`/products/${props.id}`}>
       <a className="rounded-md p-6 group">
         {/* Product's image */}
         <div className="relative w-full h-64 group-hover:transform group-hover:scale-125 group-hover:ease-in-out group-hover:duration-500">

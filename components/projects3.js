@@ -1,24 +1,20 @@
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
-import DPSHIRAZ_SQUARE from "../../public/19SHIRAZ_SQUARE.png";
-import DP19_01 from "../../public/19_01.png";
 import { useShoppingCart } from "@/hooks/use-shopping-cart";
 import { formatCurrency } from "@/lib/utils";
 import { ShoppingCartIcon } from "@heroicons/react/solid";
 import { useState } from "react";
 import { ProductCard } from "@/components/index";
 import products from "products";
+function projects() {
+  const { totalPrice, cartCount } = useShoppingCart();
 
-function Project() {
-    
-    const { totalPrice, cartCount } = useShoppingCart();
-
-    const [disabled, setDisabled] = useState(false);
+  const [disabled, setDisabled] = useState(false);
 
   return (
-    <div>
+    <nav className="main-menu" role="navigation">
       <style jsx>{`
+        /*! CSS Used from: https://a-savage.com/bundle.a4a592b99872e4e1c588.css */
         .content-container {
           align-items: stretch;
           background: #faf5eb;
@@ -32,11 +28,6 @@ function Project() {
           width: 50vw;
           overflow-x: hidden;
         }
-        .youtube-container {
-          margin-top: 2rem;
-          margin-left: 10%;
-          justify-content: center;
-        }
         @media (orientation: portrait) {
           .content-container {
             width: 100vw;
@@ -45,133 +36,84 @@ function Project() {
             flex-grow: 1;
           }
         }
+        .hover-image.Center {
+          justify-content: center;
+        }
+        .hover-image.Middle {
+          align-items: center;
+        }
+        .hover-image {
+          display: flex;
+          flex: 0 1 100%;
+          box-sizing: border-box;
+          overflow: hidden;
+        }
+
         .content-container a {
           text-decoration: underline;
         }
-        @media (orientation: landscape) {
-          .content-container--expanded {
-            width: 70vw;
-            padding-top: 0;
-          }
-        }
-        @media (orientation: portrait) {
-          .content-container--expanded {
-            width: 100vw;
-            height: 100vh;
-            padding-top: 0;
-          }
+        .content-container footer a {
+          border: none;
         }
         .content-container__router {
           display: flex;
           height: 100%;
         }
-        a.close-button {
-          border: 0;
-          position: absolute;
-        }
-        a.close-button,
-        a.close-button:visited {
-          text-decoration: none;
-        }
-        a.close-button h3 {
-          margin: 0;
-        }
-        @media (orientation: portrait) {
-          a.close-button {
-            top: 2vh;
-            right: 2vh;
-          }
-        }
-        @media (orientation: landscape) {
-          a.close-button {
-            top: 1.5vw;
-            right: 31.5vw;
-          }
-        }
-        .content-heading {
+        .default-heading {
           box-sizing: border-box;
-          width: 100%;
-          background: #faf5eb;
-          padding: 1.5vw;
+          padding: 1.5vw 1.5vw 0;
         }
         @media (orientation: portrait) {
-          .content-heading {
+          .default-heading {
             padding: 2vh;
           }
         }
-        .content-heading .title {
-          margin: 0;
-          font-family: Leitura, serif;
-          line-height: 1;
-        }
-        .responsive-image {
-          margin: 0 0 2rem;
-        }
-        .responsive-image Image {
-          width: 100%;
-          max-width: 100%;
-          height: auto;
-        }
-        .description {
+        footer {
+          box-sizing: border-box;
           display: flex;
-          flex-direction: row;
-          background: #e5e5e5;
-          width: 100%;
-          max-width: 100%;
-          padding: 2rem 1.5vw 6vw;
+          flex: 0 0 auto;
+          font-family: Basis Grotesque, sans-serif;
+          justify-content: stretch;
+          align-items: center;
+        }
+        @media (orientation: portrait) {
+          footer {
+            align-items: flex-start;
+            flex-direction: column;
+          }
+        }
+        .footer__text {
+          box-sizing: border-box;
+          padding: 1.5vw;
+          flex: 1 0 auto;
+        }
+        @media (orientation: portrait) {
+          .footer__text {
+            padding: 2vh;
+          }
+        }
+        .footer__text h3 {
+          box-sizing: border-box;
+          display: inline-block;
+          margin: 0 1em 0 0;
+          cursor: pointer;
+        }
+        .footer__text a {
+          text-decoration: none;
+        }
+        .default-view {
+          display: flex;
+          flex-direction: column;
           justify-content: space-between;
         }
         @media (orientation: portrait) {
-          .description {
-            flex-direction: column;
-            padding: 2rem 2vh 8vh;
+          .default-view {
+            flex: 1 1 50vh;
           }
-        }
-        .description__heading {
-          margin-top: 0;
         }
         @media (orientation: landscape) {
-          .description__body {
-            width: 33.3333vw;
-          }
-        }
-        .project-container {
-          max-width: 100%;
-          box-sizing: border-box;
-          flex-grow: 1;
-          display: flex;
-          flex-direction: column;
-        }
-        .project {
-          -webkit-animation: fadeIn 1s ease-out;
-          animation: fadeIn 1s ease-out;
-          -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-          -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
-          overflow: auto;
-        }
-        .project.container-fluid {
-          padding-top: 4vw;
-        }
-        @media (orientation: portrait) {
-          .project.container-fluid {
-            padding-top: 8vh;
-          }
-        }
-        .project .row {
-          padding-left: 1.5vw;
-          padding-right: 1.5vw;
-        }
-        @media (orientation: portrait) {
-          .project .row {
-            padding-left: 2vh;
-            padding-right: 2vh;
-          }
-        }
-        @media (orientation: portrait) {
-          .content-container--expanded + .main-menu {
-            display: none;
+          .default-view {
+            flex: 1 1;
           }
         }
         .main-menu {
@@ -187,7 +129,6 @@ function Project() {
           .main-menu {
             margin-top: -66.7vh;
             height: auto;
-            flex-grow: 1;
             flex-grow: 1;
           }
         }
@@ -331,67 +272,75 @@ function Project() {
           color: #000;
           padding-bottom: 1.1em;
         }
+        .categories-filter-row,
         ul.projects-list li a {
           box-sizing: border-box;
           font-family: Leitura, serif;
           font-size: calc(18.93333px + 0.26667vw);
           line-height: 1.25;
         }
-        .categories-filter-column {
-          font-family: Leitura, serif;
-          font-size: calc(18.93333px + 0.26667vw);
-          line-height: 1.25;
+        .categories-filter-row {
           font-style: normal;
           font-weight: 400;
           margin: 0;
           font-size: calc(15.46667px + 0.13333vw);
-          background: #fdddc0;
           font-family: Basis Grotesque, sans-serif;
+          line-height: 1;
           display: flex;
-          align-items: flex-start;
+          align-items: center;
           flex: 0 1 auto;
-          flex-direction: column;
           justify-content: flex-start;
-          box-sizing: border-box;
           width: 100%;
-          min-height: 3vw;
-          padding-left: 0 1.5vw;
+          min-height: calc(46.40001px + 0.4vw);
+          padding-left: 1.5vw;
+          background: #fdddc0;
         }
         @media (orientation: portrait) {
-          .categories-filter-column {
-            min-height: 4vh;
+          .categories-filter-row {
             padding-left: 2vh;
           }
         }
-        .categories-filter-animated-container {
-          z-index: -999;
-          flex: 1 1 auto;
-          box-sizing: border-box;
-          height: 0;
-          margin: 0;
-          transition: height 0.2s linear;
-          opacity: 0;
-        }
-        .categories-toggle-button {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          width: 100%;
-          margin-bottom: 1em;
-          padding: 1em 1.5vw 0;
+        .category-selector {
+          white-space: nowrap;
           cursor: pointer;
-          text-align: left;
-          border: unset;
-          outline: none;
-          background-color: #fdddc0;
+          margin-right: 1.5vw;
         }
         @media (orientation: portrait) {
-          .categories-toggle-button {
-            padding: 1em 2vh 0 0;
+          .category-selector {
+            line-height: 2;
+            margin-right: 2vh;
           }
         }
-        .categories-toggle-button__caret {
-          transform: translateY(-0.25em);
+        .category-selector input[type="checkbox"] {
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          line-height: 0;
+          height: 0;
+          width: 0;
+        }
+        .category-selector
+          input[type="checkbox"]:checked
+          + label
+          .circle-check {
+          background: #000;
+          line-height: 0;
+        }
+        .category-selector label {
+          line-height: 1;
+          display: inline-flex;
+          align-items: center;
+          cursor: pointer;
+        }
+        .category-selector .circle-check {
+          box-sizing: border-box;
+          display: inline-block;
+          margin-right: 0.4em;
+          border: 1px solid #000;
+          border-radius: 50%;
+          height: 1em;
+          width: 1em;
+          line-height: 1;
         }
         .circle-link-container:hover .circle-link__link {
           margin-left: -1em;
@@ -436,81 +385,45 @@ function Project() {
             flex-direction: column;
           }
         }
-        .container-fluid {
-          margin-right: auto;
-          margin-left: auto;
-        }
-        .row {
-          box-sizing: border-box;
-          display: flex;
-          flex: 0 1 auto;
-          flex-direction: row;
-          flex-wrap: wrap;
-          margin-top: 2rem;
-        }
-        .col-xs-12 {
-          box-sizing: border-box;
-          flex: 0 0 auto;
-        }
-        .col-xs-12 {
-          flex-basis: 100%;
-          max-width: 100%;
-        }
-        @media only screen and (min-width: 75em) {
-          .col-lg-6,
-          .col-lg-offset-2 {
-            box-sizing: border-box;
-            flex: 0 0 auto;
-          }
-          .col-lg-6 {
-            flex-basis: 50%;
-            max-width: 50%;
-          }
-          .col-lg-offset-2 {
-            margin-left: 16.66666667%;
-          }
-        }
-        html {
-          line-height: 1.15;
-          -webkit-text-size-adjust: 100%;
-        }
         body {
           margin: 0;
         }
         main {
           display: block;
         }
+        h1 {
+          font-size: 2em;
+          margin: 0.67em 0;
+        }
         a {
           background-color: transparent;
         }
-        Image {
-          border-style: none;
-        }
-        button {
+        input {
           font-family: inherit;
           font-size: 100%;
           line-height: 1.15;
           margin: 0;
         }
-        button {
+        input {
           overflow: visible;
         }
-        button {
-          text-transform: none;
-        }
-        button {
-          -webkit-appearance: button;
-        }
-        button::-moz-focus-inner {
-          border-style: none;
+        [type="checkbox"] {
+          box-sizing: border-box;
           padding: 0;
-        }
-        button:-moz-focusring {
-          outline: 1px dotted ButtonText;
         }
         .fade-in {
           -webkit-animation: fade-in 1s;
           animation: fade-in 1s;
+        }
+        h1 {
+          font-family: Leitura, serif;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 1.25em;
+          font-size: calc(27.73333px + 1.06667vw);
+        }
+        h1.indented {
+          text-indent: 52px;
         }
         h2 {
           font-size: calc(16.4px + 0.4vw);
@@ -527,28 +440,10 @@ function Project() {
         h3 {
           line-height: 1.2em;
         }
-        p {
-          font-weight: 400;
-        }
-        p {
-          font-family: Leitura, serif;
-          font-size: calc(18.93333px + 0.26667vw);
-          line-height: 1.25;
-          font-style: normal;
-          margin: 0;
-        }
-        html {
-          font-family: Leitura, serif;
-        }
-        html {
-          background: #faf5eb;
-        }
-        html,
         html * {
           box-sizing: border-box;
         }
-        body,
-        html {
+        body {
           height: calc(100vh - var(--vh-offset, 0px));
           overflow: hidden;
           margin: 0;
@@ -574,27 +469,7 @@ function Project() {
           width: 0;
           background: transparent;
         }
-        .container-fluid {
-          padding: 0;
-          margin: 0;
-        }
         /*! CSS Used keyframes */
-        @-webkit-keyframes fadeIn {
-          0% {
-            opacity: 0;
-          }
-          to {
-            opacity: 1;
-          }
-        }
-        @keyframes fadeIn {
-          0% {
-            opacity: 0;
-          }
-          to {
-            opacity: 1;
-          }
-        }
         @-webkit-keyframes expand-portfolio {
           0% {
             margin-top: 0;
@@ -643,94 +518,25 @@ function Project() {
         }
         /*! CSS Used fontfaces */
         @font-face {
-          font-family: Leitura;
-          src: url(https://a-savage.com/static/media/leitura-roman_1-webfont.f5771a76.woff2)
-              format("woff2"),
-            url(https://a-savage.com/static/media/leitura-roman_1-webfont.9181f8c7.woff)
-              format("woff");
-        }
-        @font-face {
           font-family: Basis Grotesque;
           src: url(https://a-savage.com/static/media/basisgrotesque-medium-webfont.e034a004.woff2)
               format("woff2"),
             url(https://a-savage.com/static/media/basisgrotesque-medium-webfont.15c73525.woff)
               format("woff");
         }
+        @font-face {
+          font-family: Leitura;
+          src: url(https://a-savage.com/static/media/leitura-roman_1-webfont.f5771a76.woff2)
+              format("woff2"),
+            url(https://a-savage.com/static/media/leitura-roman_1-webfont.9181f8c7.woff)
+              format("woff");
+        }
       `}</style>
-
-      <div id="mount-point">
-        <div className="app">
-          <main className="content-container content-container--expanded">
-            <div
-              tabIndex={-1}
-              className="content-container__router"
-              style={{ outline: "none" }}
-            >
-              <div className="project-container">
-                <div className="content-heading">
-                  <h2 className="title">2020 SHIRAZ</h2>
-                  <Link href="/Shop">
-                    <a className="close-button fade-in">
-                      <h3>CLOSE</h3>
-                    </a>
-                  </Link>
-                </div>
-                <div className="project container-fluid">
-                  <div
-                    style={{ marginBottom: "1rem" }}
-                    className="content-heading"
-                  ></div>
-
-                  <div className="row">
-                    <div className="col-xs-12 col-lg-6 col-lg-offset-2">
-                      <figure className="responsive-image">
-                        <Image
-                          placeholder="blur"
-                          layout="responsive"
-                          src={DPSHIRAZ_SQUARE}
-                          width={960}
-                          height={540}
-                        />
-                      </figure>
-                    </div>
-                  </div>
-
-                  <div className="content-heading">
-                    <p style={{ fontSize: "18px" }}>
-                      • 100% Shiraz grown in Sunbury, VIC <br />• Macerated for
-                      6 days then into an old French Barrique <br />
-                      • Wild ferment <br />
-                      • No sulphur added <br />
-                      • 9 months élevage. No racking <br />
-                      • 13% ABV <br />
-                      • Unfined/unfiltered <br />• Bottled Dec 2019. 420 bottles
-                      and 4 magnums
-                    </p>
-                  </div>
-
-                  <div className="row">
-                    <div className="col-xs-12 col-lg-6 col-lg-offset-2">
-                      <figure className="responsive-image">
-                        <Image
-                          placeholder="blur"
-                          layout="responsive"
-                          src={DP19_01}
-                          width={960}
-                          height={540}
-                        />
-                      </figure>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </main>
-          <nav className="main-menu" role="navigation">
-            <div className="menu-item-container">
-              <div className="menu-item menu-item--portfolio expanded">
-                <div className="menu-item__sticky-header menu-item__sticky-header--closed">
-                  <h2 className="margin-0">Shop</h2>
-                  <Link href="/cart">
+      <div className="menu-item-container">
+        <div className="menu-item menu-item--portfolio expanded">
+          <div className="menu-item__sticky-header menu-item__sticky-header--closed">
+            <h2 className="margin-0">Shop</h2>
+            <Link href="/cart">
               <a className="flex items-center space-x-1 text-gray-700 hover:text-gray-900">
                 <div className="relative">
                   <ShoppingCartIcon className="w-7 h-7 flex-shrink-0" />
@@ -741,13 +547,13 @@ function Project() {
                 </p>
               </a>
             </Link>
-                  <Link href="/">
+            <Link href="/">
               <a className="menu-button">
                 <h3>MENU</h3>
               </a>
             </Link>
-                </div>
-                <div className="projects-list-wrapper fade-in">
+          </div>
+          <div className="projects-list-wrapper fade-in">
             <ul className="projects-list fade-in">
                 {products.map((product) => (
                   <li
@@ -765,13 +571,10 @@ function Project() {
                 ))}
             </ul>
           </div>
-              </div>
-            </div>
-          </nav>
         </div>
       </div>
-    </div>
+    </nav>
   );
 }
 
-export default Project;
+export default projects;
