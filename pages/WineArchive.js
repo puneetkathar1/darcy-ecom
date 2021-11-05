@@ -4,6 +4,7 @@ import Projects from "../components/projects";
 import img1 from "../public/21DPSHIRAZ_SQUARE.png";
 import img2 from "../public/20SHIRAZ_SQUARE.png";
 import img3 from "../public/19SHIRAZ_SQUARE.png";
+import Link from 'next/link'
 function index() {
   return (
     <div id="mount-point">
