@@ -45,8 +45,8 @@ const ProductCard = props => {
   }, [cartCount]);
 
   return (
-    <Link href={`/products/${props.id}`}>
-      <a className="border rounded-md p-6 group">
+    <Link href={`/products/1`}>
+      <a className="rounded-md p-6 group">
         {/* Product's image */}
         <div className="relative w-full h-64 group-hover:transform group-hover:scale-125 group-hover:ease-in-out group-hover:duration-500">
           <Image
@@ -60,7 +60,6 @@ const ProductCard = props => {
         {/* Name + Rating */}
         <div className="mt-4 sm:mt-8">
           <p className="font-semibold text-lg capitalize">{props.name}</p>
-          <Rating rate={props?.rating?.rate} count={props?.rating?.count} />
         </div>
 
         {/* Price + CTA */}

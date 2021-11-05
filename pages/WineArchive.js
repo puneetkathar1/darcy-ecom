@@ -579,8 +579,12 @@ function index() {
               </div>
               <footer>
                 <div className="footer__text">
-                  <h3>Email : darcyhmuller@gmail.com</h3>
-                  <h3>Phone : 0419 045 241</h3>
+                <h3>
+                    <a href="mailto:poolwines@gmail.com">Email : poolwines@gmail.com</a>
+                  </h3>
+                  <h3>
+                    <Link href="https://www.instagram.com/poolwines/"><a>Insta - @poolwines</a></Link>
+                  </h3>
                 </div>
               </footer>
             </div>

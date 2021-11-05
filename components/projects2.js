@@ -1,13 +1,18 @@
 import React from "react";
-import Image from "next/image";
-import Projects from "../components/projects2";
-import img1 from "../public/21DPSHIRAZ_SQUARE.png";
-import img2 from "../public/20SHIRAZ_SQUARE.png";
-import img3 from "../public/19SHIRAZ_SQUARE.png";
-import Link from 'next/link'
-function index() {
+import Link from "next/link";
+import { useShoppingCart } from "@/hooks/use-shopping-cart";
+import { formatCurrency } from "@/lib/utils";
+import { ShoppingCartIcon } from "@heroicons/react/solid";
+import { useState } from "react";
+import { ProductCard } from "@/components/index";
+import products from "products";
+function projects() {
+  const { totalPrice, cartCount } = useShoppingCart();
+
+  const [disabled, setDisabled] = useState(false);
+
   return (
-    <div id="mount-point">
+    <nav className="main-menu" role="navigation">
       <style jsx>{`
         /*! CSS Used from: https://a-savage.com/bundle.a4a592b99872e4e1c588.css */
         .content-container {
@@ -230,8 +235,6 @@ function index() {
           justify-content: space-between;
           overflow-y: scroll;
           overflow-x: hidden;
-          line-height: 0;
-          font-size: 0;
         }
         ul.projects-list {
           box-sizing: border-box;
@@ -529,72 +532,57 @@ function index() {
               format("woff");
         }
       `}</style>
-      <div className="app">
-        <main className="content-container ">
-          <div
-            tabIndex={-1}
-            className="content-container__router"
-            style={{ outline: "none" }}
-          >
-            <div className="default-view">
-              <h1 className="default-heading indented margin-0">
-              POOL is a wine label based on Taungurung country in Kyneton.
-              </h1>
-              <div className="hover-image Middle Center">
-                <div
-                  id="2021"
-                  style={{ width: "50%", margin: "auto", display: "none" }}
-                >
-                  <Image
-                    placeholder="blur"
-                    className="image"
-                    height={540}
-                    width={960}
-                    src={img1}
-                  />
+      <div className="menu-item-container">
+        <div className="menu-item menu-item--portfolio expanded">
+          <div className="menu-item__sticky-header menu-item__sticky-header--closed">
+            <h2 className="margin-0">Shop</h2>
+            <Link href="/cart">
+              <a className="flex items-center space-x-1 text-gray-700 hover:text-gray-900">
+                <div className="relative">
+                  <ShoppingCartIcon className="w-7 h-7 flex-shrink-0" />
                 </div>
-                <div
-                  id="2020"
-                  style={{ width: "50%", margin: "auto", display: "none" }}
-                >
-                  <Image
-                    placeholder="blur"
-                    className="image"
-                    height={540}
-                    width={960}
-                    src={img2}
-                  />
-                </div>
-                <div
-                  id="2019"
-                  style={{ width: "50%", margin: "auto", display: "none" }}
-                >
-                  <Image
-                    placeholder="blur"
-                    className="image"
-                    height={540}
-                    width={960}
-                    src={img3}
-                  />
-                </div>
-              </div>
-              <footer>
-                <div className="footer__text">
-                <h3>
-                    <a href="mailto:poolwines@gmail.com">Email : poolwines@gmail.com</a>
-                  </h3>
-                  <h3>
-                    <Link href="https://www.instagram.com/poolwines/"><a>Insta - @poolwines</a></Link>
-                  </h3>
-                </div>
-              </footer>
-            </div>
+                <p className="text-lg">
+                  {formatCurrency(totalPrice)}{" "}
+                  <span className="text-sm text-gray-500">({cartCount})</span>
+                </p>
+              </a>
+            </Link>
+            <Link href="/">
+              <a className="menu-button">
+                <h3>MENU</h3>
+              </a>
+            </Link>
           </div>
-        </main>
-        <Projects />
+          <div className="projects-list-wrapper fade-in">
+            <ul className="projects-list fade-in">
+                {products.map((product) => (
+                  <li
+                    onMouseOver={(e) => {
+                      e.preventDefault;
+                      document.getElementById("2021").style.display = "block";
+                    }}
+                    onMouseOut={(e) => {
+                      e.preventDefault;
+                      document.getElementById("2021").style.display = "none";
+                    }}
+                    className="projects-list-item circle-link-container"
+                    style={{margin: 'auto', border: '#6B725F 1px solid', padding: '2rem', marginBottom: '1rem'}}
+                  >
+                    <ProductCard
+                      key={product.id}
+                      disabled={disabled}
+                      onClickAdd={() => setDisabled(true)}
+                      onAddEnded={() => setDisabled(false)}
+                      {...product}
+                    />
+                  </li>
+                ))}
+            </ul>
+          </div>
+        </div>
       </div>
-    </div>
+    </nav>
   );
 }
 
-export default index;
+export default projects;
