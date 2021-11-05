@@ -664,7 +664,7 @@ function Project() {
               <div className="project-container">
                 <div className="content-heading">
                   <h2 className="title">2021 DIRECT PRESSED SHIRAZ</h2>
-                  <Link href="/">
+                  <Link href="/WineArchive">
                     <a className="close-button fade-in">
                       <h3>CLOSE</h3>
                     </a>
