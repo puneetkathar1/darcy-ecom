@@ -1,16 +1,17 @@
-import { useState, useEffect, useRef } from 'react';
-import { useRouter } from 'next/router';
-import { toast } from 'react-hot-toast';
-import { useShoppingCart } from '@/hooks/use-shopping-cart';
-import Image from 'next/image';
-import { formatCurrency } from '@/lib/utils';
-import { MinusSmIcon, PlusSmIcon } from '@heroicons/react/outline';
-import products from 'products';
+import { useState, useEffect, useRef } from "react";
+import { useRouter } from "next/router";
+import { toast } from "react-hot-toast";
+import { useShoppingCart } from "@/hooks/use-shopping-cart";
+import Image from "next/image";
+import { formatCurrency } from "@/lib/utils";
+import { MinusSmIcon, PlusSmIcon } from "@heroicons/react/outline";
+import products from "products";
 import Link from "next/link";
-import Projects from "../../components/projects3";
 
-const Product = props => {
+import { ShoppingCartIcon } from "@heroicons/react/solid";
+import { ProductCard } from "@/components/index";
 
+const Product = (props) => {
   const router = useRouter();
   const { cartCount, addItem } = useShoppingCart();
   const [qty, setQty] = useState(1);
@@ -22,11 +23,14 @@ const Product = props => {
   const handleOnAddToCart = () => {
     setAdding(true);
     toastId.current = toast.loading(
-      `Adding ${qty} item${qty > 1 ? 's' : ''}...`
+      `Adding ${qty} item${qty > 1 ? "s" : ""}...`
     );
     addItem(props, qty);
   };
 
+  const { totalPrice } = useShoppingCart();
+
+  const [disabled, setDisabled] = useState(false);
   useEffect(() => {
     if (firstRun.current) {
       firstRun.current = false;
@@ -42,7 +46,7 @@ const Product = props => {
 
   return (
     <div>
-          <style jsx>{`
+      <style jsx>{`
         .content-container {
           align-items: stretch;
           background: #faf5eb;
@@ -694,7 +698,7 @@ const Product = props => {
             >
               <div className="project-container">
                 <div className="content-heading">
-                  <h2 className="title">{props.name}</h2>
+                  <h2 className="title">2020 SHIRAZ</h2>
                   <Link href="/WineArchive">
                     <a className="close-button fade-in">
                       <h3>CLOSE</h3>
@@ -706,74 +710,121 @@ const Product = props => {
                     style={{ marginBottom: "1rem" }}
                     className="content-heading"
                   ></div>
+                  <div className="container lg:max-w-screen-lg mx-auto py-12 px-6">
+                    <div className="flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0 md:space-x-12">
+                      {/* Product's image */}
+                      <div className="relative w-72 h-72 sm:w-96 sm:h-96">
+                        <Image
+                          src={props.image}
+                          alt="Image"
+                          layout="fill"
+                          objectFit="contain"
+                        />
+                      </div>
 
-<div className="container lg:max-w-screen-lg mx-auto py-12 px-6">
-        <div className="flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0 md:space-x-12">
-          {/* Product's image */}
-          <div className="relative w-72 h-72 sm:w-96 sm:h-96">
-            <Image
-              src={props.image}
-              alt="Image"
-              layout="fill"
-              objectFit="contain"
-            />
-          </div>
+                      {/* Product's details */}
+                      <div className="flex-1 max-w-md border border-opacity-50 rounded-md shadow-lg p-6">
+                        <h2 className="text-3xl font-semibold">{props.name}</h2>
+                        <p>
+                          <span className="text-gray-500">Availability:</span>{" "}
+                          <span className="font-semibold">In stock</span>
+                        </p>
 
-          {/* Product's details */}
-          <div className="flex-1 max-w-md border border-opacity-50 rounded-md shadow-lg p-6">
-            <h2 className="text-3xl font-semibold">{props.name}</h2>
-            <p>
-              <span className="text-gray-500">Availability:</span>{' '}
-              <span className="font-semibold">In stock</span>
-            </p>
+                        {/* Price */}
+                        <div className="mt-8 border-t pt-4">
+                          <p className="text-gray-500">Price:</p>
+                          <p className="text-xl font-semibold">
+                            {formatCurrency(props.price)}
+                          </p>
+                        </div>
 
-            {/* Price */}
-            <div className="mt-8 border-t pt-4">
-              <p className="text-gray-500">Price:</p>
-              <p className="text-xl font-semibold">
-                {formatCurrency(props.price)}
-              </p>
-            </div>
+                        <div className="mt-4 border-t pt-4">
+                          {/* Quantity */}
+                          <p className="text-gray-500">Quantity:</p>
+                          <div className="mt-1 flex items-center space-x-3">
+                            <button
+                              onClick={() => setQty((prev) => prev - 1)}
+                              disabled={qty <= 1}
+                              className="disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-transparent disabled:hover:text-current hover:bg-rose-100 hover:text-rose-500 rounded-md p-1"
+                            >
+                              <MinusSmIcon className="w-6 h-6 flex-shrink-0" />
+                            </button>
+                            <p className="font-semibold text-xl">{qty}</p>
+                            <button
+                              onClick={() => setQty((prev) => prev + 1)}
+                              className="hover:bg-green-100 hover:text-green-500 rounded-md p-1"
+                            >
+                              <PlusSmIcon className="w-6 h-6 flex-shrink-0 " />
+                            </button>
+                          </div>
 
-            <div className="mt-4 border-t pt-4">
-              {/* Quantity */}
-              <p className="text-gray-500">Quantity:</p>
-              <div className="mt-1 flex items-center space-x-3">
-                <button
-                  onClick={() => setQty(prev => prev - 1)}
-                  disabled={qty <= 1}
-                  className="disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-transparent disabled:hover:text-current hover:bg-rose-100 hover:text-rose-500 rounded-md p-1"
-                >
-                  <MinusSmIcon className="w-6 h-6 flex-shrink-0" />
-                </button>
-                <p className="font-semibold text-xl">{qty}</p>
-                <button
-                  onClick={() => setQty(prev => prev + 1)}
-                  className="hover:bg-green-100 hover:text-green-500 rounded-md p-1"
-                >
-                  <PlusSmIcon className="w-6 h-6 flex-shrink-0 " />
-                </button>
-              </div>
-
-              {/* Add to cart button */}
-              <button
-                type="button"
-                onClick={handleOnAddToCart}
-                disabled={adding}
-                className="mt-8 border rounded py-2 px-6 bg-rose-500 hover:bg-rose-600 border-rose-500 hover:border-rose-600 focus:ring-4 focus:ring-opacity-50 focus:ring-rose-500 text-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                Add to cart ({qty})
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
- 
+                          {/* Add to cart button */}
+                          <button
+                            type="button"
+                            onClick={handleOnAddToCart}
+                            disabled={adding}
+                            className="mt-8 border rounded py-2 px-6 bg-rose-500 hover:bg-rose-600 border-rose-500 hover:border-rose-600 focus:ring-4 focus:ring-opacity-50 focus:ring-rose-500 text-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                          >
+                            Add to cart ({qty})
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </main>
-          <Projects />
+          <nav className="main-menu" role="navigation">
+            <div className="menu-item-container">
+              <div className="menu-item menu-item--portfolio expanded">
+                <div className="menu-item__sticky-header menu-item__sticky-header--closed">
+                  <h2 className="margin-0">Shop</h2>
+                  <Link href="/cart">
+                    <a className="flex items-center space-x-1 text-gray-700 hover:text-gray-900">
+                      <div className="relative">
+                        <ShoppingCartIcon className="w-7 h-7 flex-shrink-0" />
+                      </div>
+                      <p className="text-lg">
+                        {formatCurrency(totalPrice)}{" "}
+                        <span className="text-sm text-gray-500">
+                          ({cartCount})
+                        </span>
+                      </p>
+                    </a>
+                  </Link>
+                  <Link href="/">
+                    <a className="menu-button">
+                      <h3>MENU</h3>
+                    </a>
+                  </Link>
+                </div>
+                <div className="projects-list-wrapper fade-in">
+                  <ul className="projects-list fade-in">
+                    {products.map((product) => (
+                      <li
+                        className="projects-list-item circle-link-container"
+                        style={{
+                          margin: "auto",
+                          border: "#6B725F 1px solid",
+                          padding: "2rem",
+                          marginBottom: "1rem",
+                        }}
+                      >
+                        <ProductCard
+                          key={product.id}
+                          disabled={disabled}
+                          onClickAdd={() => setDisabled(true)}
+                          onAddEnded={() => setDisabled(false)}
+                          {...product}
+                        />
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
         </div>
       </div>
     </div>
@@ -783,7 +834,7 @@ const Product = props => {
 export async function getStaticPaths() {
   return {
     // Existing posts are rendered to HTML at build time
-    paths: Object.keys(products)?.map(id => ({
+    paths: Object.keys(products)?.map((id) => ({
       params: { id },
     })),
     // Enable statically generating additional pages
@@ -793,7 +844,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   try {
-    const props = products?.find(product => product.id === params.id) ?? {};
+    const props = products?.find((product) => product.id === params.id) ?? {};
 
     return {
       props,
