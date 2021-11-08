@@ -171,7 +171,7 @@ function projects() {
           }
         }
         .menu-item--portfolio {
-          background: #e9b000;
+          background: #f5435f;
         }
         .menu-item--portfolio.expanded {
           display: flex;

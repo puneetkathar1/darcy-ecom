@@ -322,8 +322,6 @@ const Product = (props) => {
           justify-content: space-between;
           overflow-y: scroll;
           overflow-x: hidden;
-          line-height: 0;
-          font-size: 0;
         }
         ul.projects-list {
           box-sizing: border-box;
@@ -608,6 +606,10 @@ const Product = (props) => {
           padding: 0;
           margin: 0;
         }
+        .htmlInsert{
+          padding: 3vw 3vw;
+          font-size: 1.1rem
+        }
         /*! CSS Used keyframes */
         @-webkit-keyframes fadeIn {
           0% {
@@ -698,8 +700,8 @@ const Product = (props) => {
             >
               <div className="project-container">
                 <div className="content-heading">
-                  <h2 className="title">2020 SHIRAZ</h2>
-                  <Link href="/WineArchive">
+                  <h2 className="title">{props.name}</h2>
+                  <Link href="/Shop">
                     <a className="close-button fade-in">
                       <h3>CLOSE</h3>
                     </a>
@@ -715,7 +717,7 @@ const Product = (props) => {
                       {/* Product's image */}
                       <div className="relative w-72 h-72 sm:w-96 sm:h-96">
                         <Image
-                          src={props.image}
+                          src={props.image2}
                           alt="Image"
                           layout="fill"
                           objectFit="contain"
@@ -770,6 +772,7 @@ const Product = (props) => {
                         </div>
                       </div>
                     </div>
+                    <div className="htmlInsert" dangerouslySetInnerHTML={{__html: props.description}}></div>
                   </div>
                 </div>
               </div>

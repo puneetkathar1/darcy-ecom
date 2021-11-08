@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import darcy from "../public/autoportraitdarcy.png";
+import darcy from "../public/poolabout.png";
 function About() {
   return (
     <div id="mount-point">
@@ -54,8 +54,9 @@ function About() {
         .about-image {
           flex: 2 1 auto;
           text-align: right;
-          padding-top: 1.5vw;
+          padding-top: 3.5vw;
           padding-right: 1.5vw;
+          padding-left: 1.5vw;
         }
         @media (orientation: portrait) {
           .about-image {
@@ -439,17 +440,15 @@ function About() {
               <div className="about-image">
                 <Image
                   placeholder="blur"
-                  height={300}
-                  width={480}
+                  height={360}
+                  width={640}
                   src={darcy}
                 />
               </div>
               <footer>
                 <div className="footer__text">
                   <h3>
-                    <a href="mailto:poolwines@gmail.com">
-                      poolwines@gmail.com
-                    </a>
+                    <a href="mailto:poolwines@gmail.com">poolwines@gmail.com</a>
                   </h3>
                   <h3>
                     <Link href="https://www.instagram.com/poolwines/">
@@ -485,9 +484,7 @@ function About() {
                 <hr />
                 <h2>Contact</h2>
                 <p>
-                  <a href="mailto:poolwines@gmail.com">
-                    poolwines@gmail.com
-                  </a>
+                  <a href="mailto:poolwines@gmail.com">poolwines@gmail.com</a>
                   <br />
                   <Link href="https://www.instagram.com/poolwines/">
                     <a>@poolwines</a>
@@ -496,20 +493,22 @@ function About() {
                 <hr />
                 <h2>Bio</h2>
                 <p>
-                  POOL is Tim, Al, Ed & Darcy. We are based in Taungurung
-                  Country, in Kyneton.
+                  POOL is Tim, Al, Ed & Darcy. It is also everyone that helps us
+                  with advice, helps us pick fruit, helps us bottle and drinks
+                  our wine. We are based on Taungurung Country, in Kyneton.
                   <br />
                   <br />
-                  POOL had it’s first vintage in 2019 and we continue to expand
-                  and grow our repertoire with each season. We work with local
-                  growers and vineyards to source grapes that have been grown in
-                  a way that is responsible to the land – reducing the use of
-                  sprays and interference and then hand-picking with our friends
-                  where we can.
+                  POOL had its first vintage in 2019 using half a tonne of local
+                  Shiraz. We learnt a lot. As we continue to learn we continue
+                  to expand and grow our repertoire with each season. We work
+                  with growers and vineyards local to the region to source
+                  grapes that have been grown in a way that is responsible to
+                  the land – reducing the use of sprays and interference and
+                  then hand-picking with our friends whenever we can.
                   <br />
                   <br />
-                  In the winery we use no additive of any kind, we don’t fine or
-                  filter and prefer to use hand tools and processes where we
+                  In the winery we use no additives of any kind, we don’t fine
+                  or filter and prefer to use hand tools and processes where we
                   can.
                 </p>
                 <hr />
@@ -518,12 +517,12 @@ function About() {
                   POOL Wines Pty. Ltd.
                   <br />
                   <br />
-                  It is against the law to sell or supply alcohol to, or to
+                  <i>It is against the law to sell or supply alcohol to, or to
                   obtain alcohol on behalf of, a person under the age of 18
-                  years.
+                  years</i>
                   <br />
                   <br />
-                  Liquor License Vic 33777973
+                  <i>Liquor License Vic 33777973</i>
                 </p>
               </div>
             </div>

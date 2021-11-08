@@ -237,7 +237,7 @@ function Project() {
           }
         }
         .menu-item--portfolio {
-          background: #e9b000;
+          background: #f5435f;
         }
         .menu-item--portfolio.expanded {
           display: flex;
@@ -722,8 +722,8 @@ function Project() {
                           placeholder="blur"
                           layout="responsive"
                           src={DP20_05}
-                          width={100}
-                          height={100}
+                          width={128}
+                          height={160}
                         />
                       </figure>
                     </div>
@@ -736,8 +736,8 @@ function Project() {
                           placeholder="blur"
                           layout="responsive"
                           src={DP20_01}
-                          width={100}
-                          height={100}
+                          width={128}
+                          height={160}
                         />
                       </figure>
                     </div>
@@ -750,8 +750,8 @@ function Project() {
                           placeholder="blur"
                           layout="responsive"
                           src={DP20_02}
-                          width={100}
-                          height={100}
+                          width={128}
+                          height={160}
                         />
                       </figure>
                     </div>
@@ -764,8 +764,8 @@ function Project() {
                           placeholder="blur"
                           layout="responsive"
                           src={DP20_03}
-                          width={100}
-                          height={100}
+                          width={128}
+                          height={160}
                         />
                       </figure>
                     </div>
@@ -778,8 +778,8 @@ function Project() {
                           placeholder="blur"
                           layout="responsive"
                           src={DP20_04}
-                          width={100}
-                          height={100}
+                          width={128}
+                          height={160}
                         />
                       </figure>
                     </div>
@@ -792,8 +792,8 @@ function Project() {
                           placeholder="blur"
                           layout="responsive"
                           src={DP20_06}
-                          width={100}
-                          height={100}
+                          width={128}
+                          height={160}
                         />
                       </figure>
                     </div>
@@ -806,8 +806,8 @@ function Project() {
                           placeholder="blur"
                           layout="responsive"
                           src={DP20_07}
-                          width={100}
-                          height={100}
+                          width={128}
+                          height={160}
                         />
                       </figure>
                     </div>
@@ -820,8 +820,8 @@ function Project() {
                           placeholder="blur"
                           layout="responsive"
                           src={DP20_09}
-                          width={100}
-                          height={100}
+                          width={128}
+                          height={160}
                         />
                       </figure>
                     </div>
@@ -834,8 +834,8 @@ function Project() {
                           placeholder="blur"
                           layout="responsive"
                           src={DP20_08}
-                          width={100}
-                          height={100}
+                          width={128}
+                          height={160}
                         />
                       </figure>
                     </div>

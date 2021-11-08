@@ -1,21 +1,19 @@
 import React from "react";
 import Image from "next/image";
-import Link from 'next/link'
+import Link from "next/link";
 
 var randomImages = [
-  require('../public/home_01.png'),
-  require('../public/home_02.png'),
-  require('../public/home_03.png'),
-  require('../public/home_04.png'),
-  require('../public/home_05.png'),
-  require('../public/home_06.png'),
-  require('../public/home_07.png'),
-  require('../public/home_08.png'),
+  require("../public/home_01.png"),
+  require("../public/home_02.png"),
+  require("../public/home_03.png"),
+  require("../public/home_04.png"),
+  require("../public/home_05.png"),
+  require("../public/home_06.png"),
+  require("../public/home_07.png"),
+  require("../public/home_08.png"),
 ];
 
 function home() {
-
-
   return (
     <div id="mount-point">
       <style jsx>{`
@@ -207,7 +205,7 @@ function home() {
           }
         }
         .menu-item--portfolio {
-          background: #E9B000;
+          background: #e9b000;
         }
         .menu-item--about {
           background: #f5435f;
@@ -359,20 +357,28 @@ function home() {
       `}</style>
       <div className="app">
         <main className="content-container ">
-          <div tabIndex={-1} className="content-container__router" style={{outline: 'none'}}>
+          <div
+            tabIndex={-1}
+            className="content-container__router"
+            style={{ outline: "none" }}
+          >
             <div className="default-view">
               <h1 className="default-heading indented margin-0">
-              POOL is a wine label based on Taungurung country in Kyneton.
+                POOL is a wine label based on Taungurung country in Kyneton.
               </h1>
               <div className="homepage-image-container">
                 <div className="homepage-image-grid-container container-fluid">
                   <div className="homepage-image-row col-xs-8 col-xs-offset-2">
-                  <Image
-                  placeholder="blur"
-                  height={520}
-                  width={380}
-                  src={randomImages[Math.floor(Math.random()*randomImages.length)]}
-                />
+                    <Image
+                      placeholder="blur"
+                      height={520}
+                      width={380}
+                      src={
+                        randomImages[
+                          Math.floor(Math.random() * randomImages.length)
+                        ]
+                      }
+                    />
                   </div>
                 </div>
               </div>
@@ -382,7 +388,9 @@ function home() {
                     <a href="mailto:poolwines@gmail.com">poolwines@gmail.com</a>
                   </h3>
                   <h3>
-                    <Link href="https://www.instagram.com/poolwines/"><a>@poolwines</a></Link>
+                    <Link href="https://www.instagram.com/poolwines/">
+                      <a>@poolwines</a>
+                    </Link>
                   </h3>
                 </div>
               </footer>
@@ -390,33 +398,29 @@ function home() {
           </div>
         </main>
         <nav className="main-menu" role="navigation">
-          <div className="menu-item-container">
-            <div className="menu-item menu-item--portfolio menu-item--closed circle-link-container">
-              <div className="circle-link">
-                <a className="circle-link__link" href="/WineArchive">
+          <a href="/Shop">
+            <div className="menu-item-container">
+              <div className="menu-item menu-item--portfolio menu-item--closed circle-link-container">
+                <div className="circle-link circle-link__link">Shop</div>
+              </div>
+            </div>{" "}
+          </a>
+          <a href="/WineArchive">
+            <div className="menu-item-container">
+              <div className="menu-item menu-item--about menu-item--closed circle-link-container">
+                <div className="circle-link circle-link__link">
                   Wine Archive
-                </a>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="menu-item-container">
-            <div className="menu-item menu-item--about menu-item--closed circle-link-container">
-              <div className="circle-link">
-                <a className="circle-link__link" href="/Shop">
-                  Shop
-                </a>
+          </a>
+          <a href="/About">
+            <div className="menu-item-container">
+              <div className="menu-item menu-item--journal menu-item--closed circle-link-container">
+                <div className="circle-link circle-link__link">About</div>
               </div>
-            </div>
-          </div>
-          <div className="menu-item-container">
-            <div className="menu-item menu-item--journal menu-item--closed circle-link-container">
-              <div className="circle-link">
-                <a className="circle-link__link" href="/About">
-                  About
-                </a>
-              </div>
-            </div>
-          </div>
+            </div>{" "}
+          </a>
         </nav>
       </div>
     </div>

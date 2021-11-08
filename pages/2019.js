@@ -229,7 +229,7 @@ function Project() {
           }
         }
         .menu-item--portfolio {
-          background: #e9b000;
+          background: #f5435f;
         }
         .menu-item--portfolio.expanded {
           display: flex;
@@ -706,8 +706,8 @@ function Project() {
                           placeholder="blur"
                           layout="responsive"
                           src={DP19_01}
-                          width={100}
-                          height={100}
+                          width={128}
+                          height={160}
                         />
                       </figure>
                     </div>
