@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import DPSHIRAZ_SQUARE from "../public/19SHIRAZ_SQUARE.png";
 import DP19_01 from "../public/19_01.png";
-
+import Nav from "../components/projects3";
 function Project() {
   return (
     <div>
@@ -679,8 +679,8 @@ function Project() {
                           placeholder="blur"
                           layout="responsive"
                           src={DPSHIRAZ_SQUARE}
-                          width={960}
-                          height={540}
+                          width={100}
+                          height={100}
                         />
                       </figure>
                     </div>
@@ -706,8 +706,8 @@ function Project() {
                           placeholder="blur"
                           layout="responsive"
                           src={DP19_01}
-                          width={960}
-                          height={540}
+                          width={100}
+                          height={100}
                         />
                       </figure>
                     </div>
@@ -716,45 +716,7 @@ function Project() {
               </div>
             </div>
           </main>
-          <nav className="main-menu" role="navigation">
-            <div className="menu-item-container">
-              <div className="menu-item menu-item--portfolio expanded">
-                <div className="menu-item__sticky-header menu-item__sticky-header--closed">
-                  <h2 className="margin-0">Wine Archive</h2>
-                  <Link href="/">
-              <a className="menu-button">
-                <h3>MENU</h3>
-              </a>
-            </Link>
-                </div>
-                <div className="projects-list-wrapper fade-in">
-                  <ul className="projects-list fade-in">
-                    <li className="projects-list-item circle-link-container">
-                      <div className="circle-link">
-                        <Link href="/2021">
-                          <a className="circle-link__link">2021</a>
-                        </Link>
-                      </div>
-                    </li>
-                    <li className="projects-list-item circle-link-container">
-                      <div className="circle-link">
-                        <Link href="/2020">
-                          <a className="circle-link__link">2020</a>
-                        </Link>
-                      </div>
-                    </li>
-                    <li className="projects-list-item circle-link-container">
-                      <div className="circle-link">
-                        <Link href="/2019">
-                          <a className="circle-link__link">2019</a>
-                        </Link>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </nav>
+          <Nav />
         </div>
       </div>
     </div>

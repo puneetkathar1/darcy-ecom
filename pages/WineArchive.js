@@ -1,9 +1,12 @@
 import React from "react";
 import Image from "next/image";
 import Projects from "../components/projects";
-import img1 from "../public/21DPSHIRAZ_SQUARE.png";
-import img2 from "../public/20SHIRAZ_SQUARE.png";
-import img3 from "../public/19SHIRAZ_SQUARE.png";
+import img1 from "../public/21GOLD_SQUARE.png";
+import img2 from "../public/21RED_SQUARE.png";
+import img3 from "../public/21BLUSH_SQUARE.png";
+import img4 from "../public/21DPSHIRAZ_SQUARE.png";
+import img5 from "../public/20SHIRAZ_SQUARE.png";
+import img6 from "../public/19SHIRAZ_SQUARE.png";
 import Link from 'next/link'
 function index() {
   return (
@@ -542,15 +545,52 @@ function index() {
               </h1>
               <div className="hover-image Middle Center">
                 <div
-                  id="2021"
+                  id="2021Gold"
                   style={{ width: "50%", margin: "auto", display: "none" }}
                 >
                   <Image
                     placeholder="blur"
                     className="image"
-                    height={540}
-                    width={960}
+                    height={1080}
+                    width={1080}
                     src={img1}
+                    
+                  />
+                </div>
+                <div
+                  id="2021Red"
+                  style={{ width: "50%", margin: "auto", display: "none" }}
+                >
+                  <Image
+                    placeholder="blur"
+                    className="image"
+                    height={1080}
+                    width={1080}
+                    src={img2}
+                  />
+                </div>
+                <div
+                  id="2021Blush"
+                  style={{ width: "50%", margin: "auto", display: "none" }}
+                >
+                  <Image
+                    placeholder="blur"
+                    className="image"
+                    height={1080}
+                    width={1080}
+                    src={img3}
+                  />
+                </div>
+                <div
+                  id="2021Direct"
+                  style={{ width: "50%", margin: "auto", display: "none" }}
+                >
+                  <Image
+                    placeholder="blur"
+                    className="image"
+                    height={1080}
+                    width={1080}
+                    src={img4}
                   />
                 </div>
                 <div
@@ -560,9 +600,9 @@ function index() {
                   <Image
                     placeholder="blur"
                     className="image"
-                    height={540}
-                    width={960}
-                    src={img2}
+                    height={1080}
+                    width={1080}
+                    src={img5}
                   />
                 </div>
                 <div
@@ -572,19 +612,19 @@ function index() {
                   <Image
                     placeholder="blur"
                     className="image"
-                    height={540}
-                    width={960}
-                    src={img3}
+                    height={1080}
+                    width={1080}
+                    src={img6}
                   />
                 </div>
               </div>
               <footer>
                 <div className="footer__text">
                 <h3>
-                    <a href="mailto:poolwines@gmail.com">Email : poolwines@gmail.com</a>
+                    <a href="mailto:poolwines@gmail.com">poolwines@gmail.com</a>
                   </h3>
                   <h3>
-                    <Link href="https://www.instagram.com/poolwines/"><a>Insta - @poolwines</a></Link>
+                    <Link href="https://www.instagram.com/poolwines/"><a>@poolwines</a></Link>
                   </h3>
                 </div>
               </footer>

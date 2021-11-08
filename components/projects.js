@@ -539,17 +539,68 @@ function projects() {
               <li
                 onMouseOver={(e) => {
                   e.preventDefault;
-                  document.getElementById("2021").style.display = "block";
+                  document.getElementById("2021Gold").style.display = "block";
                 }}
                 onMouseOut={(e) => {
                   e.preventDefault;
-                  document.getElementById("2021").style.display = "none";
+                  document.getElementById("2021Gold").style.display = "none";
                 }}
                 className="projects-list-item circle-link-container"
               >
                 <div className="circle-link">
-                  <Link href="/2021">
-                    <a className="circle-link__link">2021</a>
+                  <Link href="/2021Gold">
+                    <a className="circle-link__link">2021 GOLD</a>
+                  </Link>
+                </div>
+              </li>
+              <li
+                onMouseOver={(e) => {
+                  e.preventDefault;
+                  document.getElementById("2021Red").style.display = "block";
+                }}
+                onMouseOut={(e) => {
+                  e.preventDefault;
+                  document.getElementById("2021Red").style.display = "none";
+                }}
+                className="projects-list-item circle-link-container"
+              >
+                <div className="circle-link">
+                  <Link href="/2021Red">
+                    <a className="circle-link__link">2021 RED</a>
+                  </Link>
+                </div>
+              </li>
+              <li
+                onMouseOver={(e) => {
+                  e.preventDefault;
+                  document.getElementById("2021Blush").style.display = "block";
+                }}
+                onMouseOut={(e) => {
+                  e.preventDefault;
+                  document.getElementById("2021Blush").style.display = "none";
+                }}
+                className="projects-list-item circle-link-container"
+              >
+                <div className="circle-link">
+                  <Link href="/2021Blush">
+                    <a className="circle-link__link">2021 BLUSH</a>
+                  </Link>
+                </div>
+              </li>
+              <li
+                onMouseOver={(e) => {
+                  e.preventDefault;
+                  document.getElementById("2021Direct").style.display = "block";
+                }}
+                onMouseOut={(e) => {
+                  e.preventDefault;
+                  document.getElementById("2021Direct").style.display = "none";
+                }}
+                className="projects-list-item circle-link-container"
+              >
+                <div className="circle-link">
+                  <Link href="/2021Direct">
+                    <a className="circle-link__link">2021 DIRECT PRESSED SHIRAZ</a>
                   </Link>
                 </div>
               </li>
@@ -566,7 +617,7 @@ function projects() {
               >
                 <div className="circle-link">
                   <Link href="/2020">
-                    <a className="circle-link__link">2020</a>
+                    <a className="circle-link__link">2020 SHIRAZ</a>
                   </Link>
                 </div>
               </li>
@@ -583,7 +634,7 @@ function projects() {
               >
                 <div className="circle-link">
                   <Link href="/2019">
-                    <a className="circle-link__link">2019</a>
+                    <a className="circle-link__link">2019 SHIRAZ</a>
                   </Link>
                 </div>
               </li>

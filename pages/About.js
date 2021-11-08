@@ -448,12 +448,12 @@ function About() {
                 <div className="footer__text">
                   <h3>
                     <a href="mailto:poolwines@gmail.com">
-                      Email : poolwines@gmail.com
+                      poolwines@gmail.com
                     </a>
                   </h3>
                   <h3>
                     <Link href="https://www.instagram.com/poolwines/">
-                      <a>Insta - @poolwines</a>
+                      <a>@poolwines</a>
                     </Link>
                   </h3>
                 </div>
@@ -486,11 +486,11 @@ function About() {
                 <h2>Contact</h2>
                 <p>
                   <a href="mailto:poolwines@gmail.com">
-                    Email : poolwines@gmail.com
+                    poolwines@gmail.com
                   </a>
                   <br />
                   <Link href="https://www.instagram.com/poolwines/">
-                    <a>Insta - @poolwines</a>
+                    <a>@poolwines</a>
                   </Link>
                 </p>
                 <hr />

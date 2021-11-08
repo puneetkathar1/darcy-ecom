@@ -3,13 +3,16 @@ import Image from "next/image";
 import Link from 'next/link'
 
 var randomImages = [
-  require('../public/autoportraitdarcy.png'),
-  require('../public/homepage.jpg'),
+  require('../public/home_01.png'),
+  require('../public/home_02.png'),
+  require('../public/home_03.png'),
+  require('../public/home_04.png'),
+  require('../public/home_05.png'),
+  require('../public/home_06.png'),
+  require('../public/home_07.png'),
+  require('../public/home_08.png'),
 ];
 
-function getRandomNumberBetween(min,max){
-  return Math.floor(Math.random()*(max-min+1)+min);
-}
 function home() {
 
 
