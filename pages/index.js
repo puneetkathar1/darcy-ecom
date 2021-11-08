@@ -1,8 +1,18 @@
 import React from "react";
 import Image from "next/image";
 import Link from 'next/link'
-import darcy from "../public/autoportraitdarcy.png";
+
+var randomImages = [
+  require('../public/autoportraitdarcy.png'),
+  require('../public/homepage.jpg'),
+];
+
+function getRandomNumberBetween(min,max){
+  return Math.floor(Math.random()*(max-min+1)+min);
+}
 function home() {
+
+
   return (
     <div id="mount-point">
       <style jsx>{`
@@ -63,7 +73,7 @@ function home() {
         }
         .footer__text {
           box-sizing: border-box;
-          padding: 1.5vw;
+          padding: 0.2vw 1.5vw 0.1vw 1.5vw;
           flex: 1 0 auto;
         }
         @media (orientation: portrait) {
@@ -194,13 +204,13 @@ function home() {
           }
         }
         .menu-item--portfolio {
-          background: #00a560;
+          background: #E9B000;
         }
         .menu-item--about {
-          background: #d7771a;
+          background: #f5435f;
         }
         .menu-item--journal {
-          background: #539dcc;
+          background: #2ab8f5;
         }
         .circle-link-container:hover .circle-link__link {
           margin-left: -1em;
@@ -259,7 +269,7 @@ function home() {
           max-width: 66.66666667%;
         }
         .col-xs-offset-2 {
-          margin-left: 16.66666667%;
+          margin-left: 25%;
         }
         body {
           margin: 0;
@@ -356,9 +366,9 @@ function home() {
                   <div className="homepage-image-row col-xs-8 col-xs-offset-2">
                   <Image
                   placeholder="blur"
-                  height={300}
-                  width={480}
-                  src={darcy}
+                  height={520}
+                  width={380}
+                  src={randomImages[Math.floor(Math.random()*randomImages.length)]}
                 />
                   </div>
                 </div>
@@ -366,10 +376,10 @@ function home() {
               <footer>
                 <div className="footer__text">
                   <h3>
-                    <a href="mailto:poolwines@gmail.com">Email : poolwines@gmail.com</a>
+                    <a href="mailto:poolwines@gmail.com">poolwines@gmail.com</a>
                   </h3>
                   <h3>
-                    <Link href="https://www.instagram.com/poolwines/"><a>Insta - @poolwines</a></Link>
+                    <Link href="https://www.instagram.com/poolwines/"><a>@poolwines</a></Link>
                   </h3>
                 </div>
               </footer>
