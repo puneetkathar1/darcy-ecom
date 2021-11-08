@@ -559,11 +559,11 @@ function projects() {
                   <li
                     onMouseOver={(e) => {
                       e.preventDefault;
-                      document.getElementById("2021").style.display = "block";
+                      document.getElementById(product.id2).style.display = "block";
                     }}
                     onMouseOut={(e) => {
                       e.preventDefault;
-                      document.getElementById("2021").style.display = "none";
+                      document.getElementById(product.id2).style.display = "none";
                     }}
                     className="projects-list-item circle-link-container"
                     style={{margin: 'auto', border: '#6B725F 1px solid', padding: '2rem', marginBottom: '1rem'}}

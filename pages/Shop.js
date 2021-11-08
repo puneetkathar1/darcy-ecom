@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import Projects from "../components/projects2";
-import img1 from "../public/21DPSHIRAZ_SQUARE.png";
-import img2 from "../public/20SHIRAZ_SQUARE.png";
-import img3 from "../public/19SHIRAZ_SQUARE.png";
+import img1 from "../public/GOLD_IMAGEB.png";
+import img2 from "../public/BLUSH_IMAGEB.png";
+import img3 from "../public/RED_IMAGEB.png";
 import Link from 'next/link'
 function index() {
   return (
@@ -542,38 +542,36 @@ function index() {
               </h1>
               <div className="hover-image Middle Center">
                 <div
-                  id="2021"
+                  id="2021Gold"
                   style={{ width: "50%", margin: "auto", display: "none" }}
                 >
                   <Image
                     placeholder="blur"
-                    className="image"
-                    height={540}
-                    width={960}
+                    height={1280}
+                    width={1600}
                     src={img1}
                   />
                 </div>
+                
                 <div
-                  id="2020"
+                  id="2021Blush"
                   style={{ width: "50%", margin: "auto", display: "none" }}
                 >
                   <Image
                     placeholder="blur"
-                    className="image"
-                    height={540}
-                    width={960}
+                    height={1280}
+                    width={1600}
                     src={img2}
                   />
                 </div>
                 <div
-                  id="2019"
+                  id="2021Red"
                   style={{ width: "50%", margin: "auto", display: "none" }}
                 >
                   <Image
                     placeholder="blur"
-                    className="image"
-                    height={540}
-                    width={960}
+                    height={1280}
+                    width={1600}
                     src={img3}
                   />
                 </div>
