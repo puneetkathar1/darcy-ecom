@@ -689,8 +689,8 @@ function Project() {
                           placeholder="blur"
                           layout="responsive"
                           src={DPSHIRAZ_SQUARE}
-                          width={1080}
-                          height={1080}
+                          width={100}
+                          height={100}
                         />
                       </figure>
                     </div>
