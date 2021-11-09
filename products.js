@@ -3,7 +3,6 @@
 const products = [
   {
     id: 'price_1JBWdTSHwvTbY5SOLYyfk9T2',
-    id2: '2021Blush',
     name: '2021 BLUSH',
     price: 2500,
     currency: 'AUD',
@@ -13,6 +12,7 @@ const products = [
       count: 85,
       rate: 4.5,
     },
+    stock: `In stock`,
     description: `•	35% Shiraz, 28% Merlot, 11% Cabernet Sauvignon, 24% Cabernet Franc grown & handpicked in Redesdale, VIC <br />
 •	Picked 8 March 2021<br />
 •	Pressed 8 March 2021<br />
@@ -28,7 +28,6 @@ const products = [
   },
   {
     id: 'price_1JBeeHSHwvTbY5SO4aTmID1Z',
-    id2: '2021Red',
     name: '2021 RED',
     price: 2700,
     currency: 'AUD',
@@ -38,6 +37,7 @@ const products = [
       count: 137,
       rate: 4.5,
     },
+    stock: `In stock`,
     description: `
     •	100% Shiraz grown & handpicked in Redesdale, VIC <br />
 •	60% de-stemmed and macerated for 10 days, basket pressed into old French Barriques<br />
@@ -55,7 +55,6 @@ const products = [
   },
   {
     id: 'price_1JBeeHSHwvTbYwgt34t34tTmID1Z',
-    id2: '2021Gold',
     name: '2021 GOLD',
     price: 2800,
     currency: 'AUD',
@@ -65,6 +64,7 @@ const products = [
       count: 137,
       rate: 4.5,
     },
+    stock: `In stock`,
     description: `
     •	80% Vermentino 20% Moscato Giallo handpicked and grown by the Chalmers Family in Colbinabbin, VIC <br />
 •	Vermentino de-stemmed onto whole bunch Giallo and macerated for 5 months in inox with no pigeage<br />

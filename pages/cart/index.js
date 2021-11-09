@@ -39,7 +39,7 @@ const Cart = () => {
     <>
     <Header />
       <Head>
-        <title>My Shopping Cart | Darcy Muller</title>
+        <title>My Shopping Cart | PoolWines</title>
       </Head>
       <div className="container xl:max-w-screen-xl mx-auto py-12 px-6">
         {cartCount > 0 ? (
