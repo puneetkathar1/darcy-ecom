@@ -9,6 +9,9 @@ module.exports = {
       colors: {
         rose: colors.rose,
       },
+      fontFamily: {
+        custom: ["Custom", "sans-serif"]
+      }
     },
   },
   variants: {

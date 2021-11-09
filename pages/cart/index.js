@@ -61,7 +61,7 @@ const Cart = () => {
               Your shopping cart is empty.
             </h2>
             <p className="mt-1 text-xl">
-              Check out our awesome wines{' '}
+            Return to shop
               <Link href="/Shop">
                 <a className="text-red-500 underline">here!</a>
               </Link>
@@ -74,6 +74,7 @@ const Cart = () => {
             {Object.entries(cartDetails).map(([key, product]) => (
               <div
                 key={key}
+                style={{overflowX: 'scroll'}}
                 className="flex justify-between space-x-4 hover:shadow-lg hover:border-opacity-50 border border-opacity-0 rounded-md p-4"
               >
                 {/* Image + Name */}

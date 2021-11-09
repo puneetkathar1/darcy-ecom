@@ -166,7 +166,7 @@ function home() {
         @media (orientation: portrait) {
           .main-menu {
             margin-top: 0;
-            height: calc(50vh - var(--vh-offset, 0px) / 2);
+            height: auto;
           }
         }
         .menu-item-container {

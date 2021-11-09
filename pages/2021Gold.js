@@ -696,21 +696,16 @@ function Project() {
 
                   <div className="content-heading">
                     <p style={{ fontSize: "18px" }}>
-                      • 80% Vermentino 20% Moscato Giallo handpicked and grown
-                      by the Chalmers Family in Colbinabbin, VIC <br />
+                      • 80% Vermentino 20% Moscato Giallo handpicked & grown by
+                      the Chalmers Family in Colbinabbin, Vic <br />
                       • Vermentino de-stemmed onto whole bunch Giallo and
-                      macerated for 5 months in inox with no pigeage
-                      <br />
-                      • Wild ferment
-                      <br />
-                      • No sulphur added ever
-                      <br />
-                      • Basket Pressed back into inox
-                      <br />
-                      • Unfined/unfiltered
-                      <br />
-                      • Bottled straight from lees
-                      <br />• 11.3% ABV
+                      macerated for 5 months in Inox with no pigeage <br />
+                      • Wild ferment <br />
+                      • Basket pressed back into Inox <br />
+                      • Unfined/unfiltered <br />
+                      • No sulphur added ever <br />
+                      • Bottled straight from lees <br />
+                      • 11.3% ABV
                     </p>
                   </div>
 

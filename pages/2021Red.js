@@ -707,16 +707,19 @@ function Project() {
                       <br />
                       • Wild ferment
                       <br />
-                      • No sulphur added ever
-                      <br />
                       • 7 months élevage with a few days of gentle battonage
                       incorporating healthy Vermentino Lees into half the
                       barrels. No racking
                       <br />
+                      • Unfined/unfiltered
+                      <br />
+                      • No sulphur added ever
+                      <br />
                       • 11.5% ABV
                       <br />
-                      • Unfined/unfiltered
-                      <br />• 2112 bottled
+                      • Bottled 7 November 2021
+                      <br />
+                      • 2112 bottles
                     </p>
                   </div>
 

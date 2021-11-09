@@ -688,14 +688,15 @@ function Project() {
 
                   <div className="content-heading">
                     <p style={{ fontSize: "18px" }}>
-                      • 100% Shiraz grown in Sunbury, VIC <br />• Macerated for
-                      6 days then into an old French Barrique <br />
-                      • Wild ferment <br />
-                      • No sulphur added <br />
-                      • 9 months élevage. No racking <br />
-                      • 13% ABV <br />
-                      • Unfined/unfiltered <br />• Bottled Dec 2019. 420 bottles
-                      and 4 magnums
+                    • 100% Shiraz grown in Sunbury, VIC <br />
+• Macerated for 6 days then into an old French Barrique <br />
+• Wild ferment <br />
+• 9 months élevage. No racking <br />
+• Unfined/unfiltered <br />
+• No sulphur added ever <br />
+• 13% ABV <br />
+• Bottled Dec 2019. 420 bottles and 4 magnums
+
                     </p>
                   </div>
 

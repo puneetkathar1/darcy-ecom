@@ -508,8 +508,12 @@ function About() {
                   <br />
                   <br />
                   In the winery we use no additives of any kind, we don’t fine
-                  or filter and prefer to use hand tools and processes where we
-                  can.
+                  or filter and prefer to use people power and low intervention
+                  methods wherever possible.
+                  <br />
+                  <br />
+                  We respectfully acknowledge the traditional owners of the land
+                  on which our wine is grown, made and enjoyed.
                 </p>
                 <hr />
                 <h2>Legal</h2>
@@ -517,9 +521,11 @@ function About() {
                   POOL Wines Pty. Ltd.
                   <br />
                   <br />
-                  <i>It is against the law to sell or supply alcohol to, or to
-                  obtain alcohol on behalf of, a person under the age of 18
-                  years</i>
+                  <i>
+                    It is against the law to sell or supply alcohol to, or to
+                    obtain alcohol on behalf of, a person under the age of 18
+                    years
+                  </i>
                   <br />
                   <br />
                   <i>Liquor License Vic 33777973</i>

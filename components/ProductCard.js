@@ -48,7 +48,7 @@ const ProductCard = props => {
     <Link href={`/products/${props.id}`}>
       <a className="rounded-md p-6 group">
         {/* Product's image */}
-        <div className="relative w-full h-64 group-hover:transform group-hover:scale-125 group-hover:ease-in-out group-hover:duration-500">
+        <div className="relative w-full h-64">
           <Image
             src={props.image}
             alt={props.name}
@@ -58,12 +58,12 @@ const ProductCard = props => {
         </div>
 
         {/* Name + Rating */}
-        <div className="mt-4 sm:mt-8">
+        <div style={{fontFamily: "Custom"}} className="mt-4 sm:mt-8">
           <p className="font-semibold text-lg capitalize">{props.name}</p>
         </div>
 
         {/* Price + CTA */}
-        <div className="mt-4 flex items-center justify-between space-x-2">
+        <div style={{fontFamily: "Custom"}} className="mt-4 flex items-center justify-between space-x-2">
           <div>
             <p className="text-gray-500">Price</p>
             <p className="text-lg font-semibold">
@@ -72,6 +72,7 @@ const ProductCard = props => {
           </div>
 
           <button
+           style={{fontFamily: "Custom"}}
             type="button"
             onClick={handleOnAddToCart}
             disabled={adding || props.disabled}

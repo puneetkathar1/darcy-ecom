@@ -540,42 +540,6 @@ function index() {
               <h1 className="default-heading indented margin-0">
               POOL is a wine label based on Taungurung country in Kyneton.
               </h1>
-              <div className="hover-image Middle Center">
-                <div
-                  id="2021Gold"
-                  style={{ width: "50%", margin: "auto", display: "none" }}
-                >
-                  <Image
-                    placeholder="blur"
-                    height={1280}
-                    width={1600}
-                    src={img1}
-                  />
-                </div>
-                
-                <div
-                  id="2021Blush"
-                  style={{ width: "50%", margin: "auto", display: "none" }}
-                >
-                  <Image
-                    placeholder="blur"
-                    height={1280}
-                    width={1600}
-                    src={img2}
-                  />
-                </div>
-                <div
-                  id="2021Red"
-                  style={{ width: "50%", margin: "auto", display: "none" }}
-                >
-                  <Image
-                    placeholder="blur"
-                    height={1280}
-                    width={1600}
-                    src={img3}
-                  />
-                </div>
-              </div>
               <footer>
                 <div className="footer__text">
                 <h3>

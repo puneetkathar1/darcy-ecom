@@ -697,21 +697,17 @@ function Project() {
                   <div className="content-heading">
                     <p style={{ fontSize: "18px" }}>
                       • 100% Shiraz grown & handpicked in Harcourt, VIC <br />
-                      • 90% macerated for 10 days then into old French Barriques
+                      • 90% macerated for 10 days then into old French Barriques{" "}
                       <br />
                       • 10% whole bunch carbonic maceration for 30 days then
-                      stomped and into stainless
-                      <br />
-                      • Wild ferment
-                      <br />
-                      • No sulphur added
-                      <br />
-                      • 9 months élevage. No racking
-                      <br />
-                      • 13% ABV
-                      <br />
-                      • Unfined/unfiltered
-                      <br />• Bottled Dec 2020. 750 bottles and 5 magnums
+                      stomped and into stainless <br />
+                      • Wild ferment <br />
+                      • 9 months élevage. No racking <br />
+                      • Unfined/unfiltered <br />
+                      • No sulphur added ever <br />
+                      • 13% ABV <br />
+                      • Bottled Dec 2020. 750 bottles and 5
+                      magnums
                     </p>
                   </div>
 

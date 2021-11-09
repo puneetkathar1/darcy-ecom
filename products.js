@@ -21,8 +21,9 @@ const products = [
 •	No sulphur added ever<br />
 •	12% ABV<br />
 •	Unfined/unfiltered<br />
-•	Bottled 1 August 2021<br />
-•	Free Vic shipping on 6+ bottles
+•	Bottled 1 August 2021<br /><br />
+•	Free Vic shipping on 6+ bottles<br /><br />
+<i>This can apply to all products.</i>
 `,
   },
   {
@@ -47,8 +48,9 @@ const products = [
 •	Unfined/unfiltered<br />
 •	Bottled straight from lees<br />
 •	No sulphur added ever<br />
-•	Bottled 7 November 2021<br />
-•	Free Vic shipping on 6+ bottles
+•	Bottled 7 November 2021<br /><br />
+•	Free Vic shipping on 6+ bottles<br /><br />
+<i>This can apply to all products.</i>
     `,
   },
   {
@@ -71,8 +73,9 @@ const products = [
 •	Unfined/unfiltered<br />
 •	Bottled straight from lees<br />
 •	11.3% ABV<br />
-•	No sulphur added ever<br />
-•	Free Vic shipping on 6+ bottles
+•	No sulphur added ever<br /><br />
+•	Free Vic shipping on 6+ bottles<br /><br />
+<i>This can apply to all products.</i>
     `,
   },
 ];

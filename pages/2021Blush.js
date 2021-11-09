@@ -706,14 +706,12 @@ function Project() {
                       <br />
                       • Wild ferment
                       <br />
-                      • No sulphur added
-                      <br />
-                      • 12% ABV
-                      <br />
                       • Unfined/unfiltered
                       <br />
-                      • Bottled 1 August 2021
-                      <br />• 910 bottles
+                      • No sulphur added ever
+                      <br />
+                      • 12% ABV
+                      <br />• Bottled 1 August 2021 <br />• 910 bottles
                     </p>
                   </div>
 

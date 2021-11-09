@@ -693,23 +693,17 @@ function Project() {
 
                   <div className="content-heading">
                     <p style={{ fontSize: "18px" }}>
-                      • 100% Shiraz grown & handpicked in Redesdale, VIC <br />
-                      • Picked 8 March 2021
-                      <br />
-                      • Pressed 8 March 2021
-                      <br />
-                      • 2 months élevage
-                      <br />
-                      • Wild ferment
-                      <br />
-                      • No sulphur added
-                      <br />
-                      • 11.5% ABV
-                      <br />
-                      • Unfined/unfiltered
-                      <br />
-                      • Bottled 12 May 2021
-                      <br />• 500 bottles
+                    • 100% Shiraz grown & handpicked in Redesdale, VIC <br/>
+• Picked 8 March 2021<br/>
+• Pressed 8 March 2021<br/>
+• 2 months élevage<br/>
+• Wild ferment<br/>
+• Unfined/unfiltered<br/>
+• No sulphur added ever<br/>
+• 11.5% ABV<br/>
+• Bottled 12 May 2021<br/>
+• 500 bottles<br/>
+
                     </p>
                   </div>
 

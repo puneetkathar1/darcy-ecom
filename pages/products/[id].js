@@ -608,7 +608,9 @@ const Product = (props) => {
         }
         .htmlInsert{
           padding: 3vw 3vw;
-          font-size: 1.1rem
+          font-size: 1.1rem;
+          font-family: "Custom"
+          font-weight: '400'
         }
         /*! CSS Used keyframes */
         @-webkit-keyframes fadeIn {
