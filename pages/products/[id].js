@@ -702,7 +702,7 @@ const Product = (props) => {
             >
               <div className="project-container">
                 <div className="content-heading">
-                  <h2 className="title">{props.name}</h2>
+                  <h2 style={{fontFamily: 'Custom'}} className="title">{props.name}</h2>
                   <Link href="/Shop">
                     <a className="close-button fade-in">
                       <h3>CLOSE</h3>
@@ -728,7 +728,7 @@ const Product = (props) => {
 
                       {/* Product's details */}
                       <div className="flex-1 max-w-md border border-opacity-50 rounded-md shadow-lg p-6">
-                        <h2 className="text-3xl font-semibold">{props.name}</h2>
+                        <h2 style={{fontFamily: 'Custom'}} className="text-3xl font-semibold">{props.name}</h2>
                         <p>
                           <span className="text-gray-500">Availability:</span>{" "}
                           <span className="font-semibold">{props.stock}</span>

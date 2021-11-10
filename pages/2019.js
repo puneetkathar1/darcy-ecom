@@ -659,7 +659,7 @@ function Project() {
             >
               <div className="project-container">
                 <div className="content-heading">
-                  <h2 className="title">2020 SHIRAZ</h2>
+                  <h2 className="title">2019 SHIRAZ</h2>
                   <Link href="/WineArchive">
                     <a className="close-button fade-in">
                       <h3>CLOSE</h3>
