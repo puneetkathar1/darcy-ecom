@@ -2,7 +2,7 @@
 
 const products = [
   {
-    id: 'price_1JBWdTSHwvTbY5SOLYyfk9T2',
+    id: 'price_1Jus14EZ0lUugcxD0HFIBbD9',
     name: '2021 BLUSH',
     price: 2500,
     currency: 'AUD',
@@ -26,7 +26,7 @@ const products = [
 `,
   },
   {
-    id: 'price_1JBeeHSHwvTbY5SO4aTmID1Z',
+    id: 'price_1Jus2YEZ0lUugcxDIE1Y16Go',
     name: '2021 RED',
     price: 2700,
     currency: 'AUD',
@@ -52,7 +52,7 @@ const products = [
     `,
   },
   {
-    id: 'price_1JBeeHSHwvTbYwgt34t34tTmID1Z',
+    id: 'price_1Jus2oEZ0lUugcxDmmMcZs9A',
     name: '2021 GOLD',
     price: 2800,
     currency: 'AUD',
