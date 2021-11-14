@@ -6,7 +6,6 @@ export default async function handler(req, res) {
   if (req.method === 'POST') {
     const arr = []
     arr.push(req.body.shipping)
-    console.log(arr)
 
     try {
       const session = await stripe.checkout.sessions.create({
