@@ -1,13 +1,13 @@
 import React from "react";
 import Image from "next/image";
 import Projects from "../components/projects";
-import img1 from "../public/21GOLD_SQUARE.png";
-import img2 from "../public/21RED_SQUARE.png";
-import img3 from "../public/21BLUSH_SQUARE.png";
-import img4 from "../public/21DPSHIRAZ_SQUARE.png";
-import img5 from "../public/20SHIRAZ_SQUARE.png";
-import img6 from "../public/19SHIRAZ_SQUARE.png";
-import Link from 'next/link'
+import img1 from "../public/21GOLD_SQUARE-min.png";
+import img2 from "../public/21RED_SQUARE-min.png";
+import img3 from "../public/21BLUSH_SQUARE-min.png";
+import img4 from "../public/21DPSHIRAZ_SQUARE-min.png";
+import img5 from "../public/20SHIRAZ_SQUARE-min.png";
+import img6 from "../public/19SHIRAZ_SQUARE-min.png";
+import Link from "next/link";
 function index() {
   return (
     <div id="mount-point">
@@ -541,7 +541,7 @@ function index() {
           >
             <div className="default-view">
               <h1 className="default-heading indented margin-0">
-              POOL is a wine label based on Taungurung country in Kyneton.
+                POOL is a wine label based on Taungurung country in Kyneton.
               </h1>
               <div className="hover-image Middle Center">
                 <div
@@ -554,7 +554,6 @@ function index() {
                     height={1080}
                     width={1080}
                     src={img1}
-                    
                   />
                 </div>
                 <div
@@ -620,11 +619,13 @@ function index() {
               </div>
               <footer>
                 <div className="footer__text">
-                <h3>
+                  <h3>
                     <a href="mailto:poolwines@gmail.com">poolwines@gmail.com</a>
                   </h3>
                   <h3>
-                    <Link href="https://www.instagram.com/poolwines/"><a>@poolwines</a></Link>
+                    <Link href="https://www.instagram.com/poolwines/">
+                      <a>@poolwines</a>
+                    </Link>
                   </h3>
                 </div>
               </footer>

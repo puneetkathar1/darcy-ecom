@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
 import Projects from "../components/projects2";
-import img1 from "../public/GOLD_IMAGEB.png";
-import img2 from "../public/BLUSH_IMAGEB.png";
-import img3 from "../public/RED_IMAGEB.png";
-import Link from 'next/link'
+import img1 from "../public/GOLD_IMAGEB-min.png";
+import img2 from "../public/BLUSH_IMAGEB-min.png";
+import img3 from "../public/RED_IMAGEB-min.png";
+import Link from "next/link";
 function index() {
   return (
     <div id="mount-point">
@@ -538,15 +538,19 @@ function index() {
           >
             <div className="default-view">
               <h1 className="default-heading indented margin-0">
-              POOL is a wine label based on Taungurung country in Kyneton.
+                POOL is a wine label based on Taungurung country in Kyneton.
               </h1>
               <footer>
                 <div className="footer__text">
-                <h3>
-                    <a href="mailto:poolwines@gmail.com">Email : poolwines@gmail.com</a>
+                  <h3>
+                    <a href="mailto:poolwines@gmail.com">
+                      Email : poolwines@gmail.com
+                    </a>
                   </h3>
                   <h3>
-                    <Link href="https://www.instagram.com/poolwines/"><a>Insta - @poolwines</a></Link>
+                    <Link href="https://www.instagram.com/poolwines/">
+                      <a>Insta - @poolwines</a>
+                    </Link>
                   </h3>
                 </div>
               </footer>

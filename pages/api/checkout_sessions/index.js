@@ -9,6 +9,11 @@ export default async function handler(req, res) {
         mode: 'payment',
         payment_method_types: ['card'],
         line_items: req?.body?.items ?? [],
+        allow_promotion_codes: true,
+        shipping_rates: ['shr_1JvUUCEZ0lUugcxDG5y9e8Qf'],
+        shipping_address_collection: {
+          allowed_countries: ['AU'],
+        },
         success_url: `${req.headers.origin}/success?session_id={CHECKOUT_SESSION_ID}`,
         cancel_url: `${req.headers.origin}/cart`,
       });

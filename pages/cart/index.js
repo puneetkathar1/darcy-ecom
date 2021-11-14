@@ -27,6 +27,7 @@ const Cart = () => {
       items: Object.entries(cartDetails).map(([_, { id, quantity }]) => ({
         price: id,
         quantity,
+        
       })),
     });
 

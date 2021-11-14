@@ -3,14 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 var randomImages = [
-  require("../public/home_01.png"),
-  require("../public/home_02.png"),
-  require("../public/home_03.png"),
-  require("../public/home_04.png"),
-  require("../public/home_05.png"),
-  require("../public/home_06.png"),
-  require("../public/home_07.png"),
-  require("../public/home_08.png"),
+  require("../public/home_01-min.png"),
+  require("../public/home_02-min.png"),
+  require("../public/home_03-min.png"),
+  require("../public/home_04-min.png"),
+  require("../public/home_05-min.png"),
+  require("../public/home_06-min.png"),
+  require("../public/home_07-min.png"),
+  require("../public/home_08-min.png"),
 ];
 
 function home() {

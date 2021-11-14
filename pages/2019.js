@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import DPSHIRAZ_SQUARE from "../public/19SHIRAZ_SQUARE.png";
-import DP19_01 from "../public/19_01.png";
+import DPSHIRAZ_SQUARE from "../public/19SHIRAZ_SQUARE-min.png";
+import DP19_01 from "../public/19_01-min.png";
 import Nav from "../components/projects3";
 function Project() {
   return (
@@ -688,15 +688,15 @@ function Project() {
 
                   <div className="content-heading">
                     <p style={{ fontSize: "18px" }}>
-                    • 100% Shiraz grown in Sunbury, VIC <br />
-• Macerated for 6 days then into an old French Barrique <br />
-• Wild ferment <br />
-• 9 months élevage. No racking <br />
-• Unfined/unfiltered <br />
-• No sulphur added ever <br />
-• 13% ABV <br />
-• Bottled Dec 2019. 420 bottles and 4 magnums
-
+                      • 100% Shiraz grown in Sunbury, VIC <br />
+                      • Macerated for 6 days then into an old French Barrique{" "}
+                      <br />
+                      • Wild ferment <br />
+                      • 9 months élevage. No racking <br />
+                      • Unfined/unfiltered <br />
+                      • No sulphur added ever <br />
+                      • 13% ABV <br />• Bottled Dec 2019. 420 bottles and 4
+                      magnums
                     </p>
                   </div>
 

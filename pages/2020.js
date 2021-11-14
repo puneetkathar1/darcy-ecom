@@ -1,16 +1,16 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import DPSHIRAZ_SQUARE from "../public/20SHIRAZ_SQUARE.png";
-import DP20_05 from "../public/20_05.png";
-import DP20_01 from "../public/20_01.png";
-import DP20_02 from "../public/20_02.png";
-import DP20_03 from "../public/20_03.png";
-import DP20_04 from "../public/20_04.png";
-import DP20_06 from "../public/20_06.png";
-import DP20_07 from "../public/20_07.png";
-import DP20_08 from "../public/20_08.png";
-import DP20_09 from "../public/20_09.png";
+import DPSHIRAZ_SQUARE from "../public/20SHIRAZ_SQUARE-min.png";
+import DP20_05 from "../public/20_05-min.png";
+import DP20_01 from "../public/20_01-min.png";
+import DP20_02 from "../public/20_02-min.png";
+import DP20_03 from "../public/20_03-min.png";
+import DP20_04 from "../public/20_04-min.png";
+import DP20_06 from "../public/20_06-min.png";
+import DP20_07 from "../public/20_07-min.png";
+import DP20_08 from "../public/20_08-min.png";
+import DP20_09 from "../public/20_09-min.png";
 import Nav from "../components/projects3";
 function Project() {
   return (
@@ -696,8 +696,8 @@ function Project() {
 
                   <div className="content-heading">
                     <p style={{ fontSize: "18px" }}>
-                      • 100% Shiraz grown & handpicked in Harcourt, VIC <br />
-                      • 90% macerated for 10 days then into old French Barriques{" "}
+                      • 100% Shiraz grown & handpicked in Harcourt, VIC <br />•
+                      90% macerated for 10 days then into old French Barriques{" "}
                       <br />
                       • 10% whole bunch carbonic maceration for 30 days then
                       stomped and into stainless <br />
@@ -705,8 +705,7 @@ function Project() {
                       • 9 months élevage. No racking <br />
                       • Unfined/unfiltered <br />
                       • No sulphur added ever <br />
-                      • 13% ABV <br />
-                      • Bottled Dec 2020. 750 bottles and 5
+                      • 13% ABV <br />• Bottled Dec 2020. 750 bottles and 5
                       magnums
                     </p>
                   </div>

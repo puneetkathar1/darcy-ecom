@@ -1,13 +1,11 @@
-
-
 const products = [
   {
-    id: 'price_1Jus14EZ0lUugcxD0HFIBbD9',
-    name: '2021 BLUSH',
+    id: "price_1Jus14EZ0lUugcxD0HFIBbD9",
+    name: "2021 BLUSH",
     price: 2500,
-    currency: 'AUD',
-    image: '/WEBSHOP_BLUSH.jpg',
-    image2: '/BLUSH_IMAGEB.png',
+    currency: "AUD",
+    image: "/WEBSHOP_BLUSH-min.jpg",
+    image2: "/BLUSH_IMAGEB-min.png",
     rating: {
       count: 85,
       rate: 4.5,
@@ -26,12 +24,12 @@ const products = [
 `,
   },
   {
-    id: 'price_1Jus2YEZ0lUugcxDIE1Y16Go',
-    name: '2021 RED',
+    id: "price_1Jus2YEZ0lUugcxDIE1Y16Go",
+    name: "2021 RED",
     price: 2700,
-    currency: 'AUD',
-    image: '/WEBSHOP_RED.jpg',
-    image2: '/RED_IMAGEB.png',
+    currency: "AUD",
+    image: "/WEBSHOP_RED-min.jpg",
+    image2: "/RED_IMAGEB-min.png",
     rating: {
       count: 137,
       rate: 4.5,
@@ -52,12 +50,12 @@ const products = [
     `,
   },
   {
-    id: 'price_1Jus2oEZ0lUugcxDmmMcZs9A',
-    name: '2021 GOLD',
+    id: "price_1Jus2oEZ0lUugcxDmmMcZs9A",
+    name: "2021 GOLD",
     price: 2800,
-    currency: 'AUD',
-    image: '/WEBSHOP_GOLD.jpg',
-    image2: '/GOLD_IMAGEB.png',
+    currency: "AUD",
+    image: "/WEBSHOP_GOLD-min.jpg",
+    image2: "/GOLD_IMAGEB-min.png",
     rating: {
       count: 137,
       rate: 4.5,

@@ -1,13 +1,13 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import DPSHIRAZ_SQUARE from "../public/21DPSHIRAZ_SQUARE.png";
-import DP_02 from "../public/21DP_02.png";
-import DP_01 from "../public/21DP_01.png";
-import DP_03 from "../public/21DP_03.png";
-import DP_04 from "../public/21DP_04.png";
-import DP_05 from "../public/21DP_05.png";
-import DP_06 from "../public/21DP_06.png";
+import DPSHIRAZ_SQUARE from "../public/21DPSHIRAZ_SQUARE-min.png";
+import DP_02 from "../public/21DP_02-min.png";
+import DP_01 from "../public/21DP_01-min.png";
+import DP_03 from "../public/21DP_03-min.png";
+import DP_04 from "../public/21DP_04-min.png";
+import DP_05 from "../public/21DP_05-min.png";
+import DP_06 from "../public/21DP_06-min.png";
 import Nav from "../components/projects3";
 function Project() {
   return (
@@ -693,17 +693,25 @@ function Project() {
 
                   <div className="content-heading">
                     <p style={{ fontSize: "18px" }}>
-                    • 100% Shiraz grown & handpicked in Redesdale, VIC <br/>
-• Picked 8 March 2021<br/>
-• Pressed 8 March 2021<br/>
-• 2 months élevage<br/>
-• Wild ferment<br/>
-• Unfined/unfiltered<br/>
-• No sulphur added ever<br/>
-• 11.5% ABV<br/>
-• Bottled 12 May 2021<br/>
-• 500 bottles<br/>
-
+                      • 100% Shiraz grown & handpicked in Redesdale, VIC <br />
+                      • Picked 8 March 2021
+                      <br />
+                      • Pressed 8 March 2021
+                      <br />
+                      • 2 months élevage
+                      <br />
+                      • Wild ferment
+                      <br />
+                      • Unfined/unfiltered
+                      <br />
+                      • No sulphur added ever
+                      <br />
+                      • 11.5% ABV
+                      <br />
+                      • Bottled 12 May 2021
+                      <br />
+                      • 500 bottles
+                      <br />
                     </p>
                   </div>
 

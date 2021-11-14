@@ -1,16 +1,16 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import DPSHIRAZ_SQUARE from "../public/21BLUSH_SQUARE.png";
-import DP_01 from "../public/21BLUSH_07.png";
-import DP_02 from "../public/21BLUSH_09.png";
-import DP_03 from "../public/21BLUSH_08.png";
-import DP_04 from "../public/21BLUSH_01.png";
-import DP_05 from "../public/21BLUSH_02.png";
-import DP_06 from "../public/21BLUSH_03.png";
-import DP_07 from "../public/21BLUSH_04.png";
-import DP_08 from "../public/21BLUSH_05.png";
-import DP_09 from "../public/21BLUSH_06.png";
+import DPSHIRAZ_SQUARE from "../public/21BLUSH_SQUARE-min.png";
+import DP_01 from "../public/21BLUSH_07-min.png";
+import DP_02 from "../public/21BLUSH_09-min.png";
+import DP_03 from "../public/21BLUSH_08-min.png";
+import DP_04 from "../public/21BLUSH_01-min.png";
+import DP_05 from "../public/21BLUSH_02-min.png";
+import DP_06 from "../public/21BLUSH_03-min.png";
+import DP_07 from "../public/21BLUSH_04-min.png";
+import DP_08 from "../public/21BLUSH_05-min.png";
+import DP_09 from "../public/21BLUSH_06-min.png";
 import Nav from "../components/projects3";
 function Project() {
   return (

@@ -1,16 +1,16 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import DPSHIRAZ_SQUARE from "../public/21GOLD_SQUARE.png";
-import DP_01 from "../public/21GOLD_07.png";
-import DP_02 from "../public/21GOLD_06.png";
-import DP_03 from "../public/21GOLD_05.png";
-import DP_04 from "../public/21GOLD_04.png";
-import DP_05 from "../public/21GOLD_01.png";
-import DP_06 from "../public/21GOLD_02.png";
-import DP_07 from "../public/21GOLD_03.png";
-import DP_08 from "../public/21GOLD_08.png";
-import DP_09 from "../public/21GOLD_09.png";
+import DPSHIRAZ_SQUARE from "../public/21GOLD_SQUARE-min.png";
+import DP_01 from "../public/21GOLD_07-min.png";
+import DP_02 from "../public/21GOLD_06-min.png";
+import DP_03 from "../public/21GOLD_05-min.png";
+import DP_04 from "../public/21GOLD_04-min.png";
+import DP_05 from "../public/21GOLD_01-min.png";
+import DP_06 from "../public/21GOLD_02-min.png";
+import DP_07 from "../public/21GOLD_03-min.png";
+import DP_08 from "../public/21GOLD_08-min.png";
+import DP_09 from "../public/21GOLD_09-min.png";
 import Nav from "../components/projects3";
 function Project() {
   return (
@@ -704,8 +704,7 @@ function Project() {
                       • Basket pressed back into Inox <br />
                       • Unfined/unfiltered <br />
                       • No sulphur added ever <br />
-                      • Bottled straight from lees <br />
-                      • 11.3% ABV
+                      • Bottled straight from lees <br />• 11.3% ABV
                     </p>
                   </div>
 

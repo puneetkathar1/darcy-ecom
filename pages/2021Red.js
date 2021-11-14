@@ -1,18 +1,18 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import DPSHIRAZ_SQUARE from "../public/21RED_SQUARE.png";
-import DP_01 from "../public/21RED_01.png";
-import DP_02 from "../public/21RED_02.png";
-import DP_03 from "../public/21RED_08.png";
-import DP_04 from "../public/21RED_07.png";
-import DP_05 from "../public/21RED_09.png";
-import DP_06 from "../public/21RED_11.png";
-import DP_07 from "../public/21RED_10.png";
-import DP_08 from "../public/21RED_03.png";
-import DP_09 from "../public/21RED_05.png";
-import DP_10 from "../public/21RED_06.png";
-import DP_11 from "../public/21RED_04.png";
+import DPSHIRAZ_SQUARE from "../public/21RED_SQUARE-min.png";
+import DP_01 from "../public/21RED_01-min.png";
+import DP_02 from "../public/21RED_02-min.png";
+import DP_03 from "../public/21RED_08-min.png";
+import DP_04 from "../public/21RED_07-min.png";
+import DP_05 from "../public/21RED_09-min.png";
+import DP_06 from "../public/21RED_11-min.png";
+import DP_07 from "../public/21RED_10-min.png";
+import DP_08 from "../public/21RED_03-min.png";
+import DP_09 from "../public/21RED_05-min.png";
+import DP_10 from "../public/21RED_06-min.png";
+import DP_11 from "../public/21RED_04-min.png";
 import Nav from "../components/projects3";
 function Project() {
   return (
@@ -718,8 +718,7 @@ function Project() {
                       • 11.5% ABV
                       <br />
                       • Bottled 7 November 2021
-                      <br />
-                      • 2112 bottles
+                      <br />• 2112 bottles
                     </p>
                   </div>
 

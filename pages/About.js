@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import darcy from "../public/poolabout.png";
+import darcy from "../public/poolabout-min.png";
 function About() {
   return (
     <div id="mount-point">
