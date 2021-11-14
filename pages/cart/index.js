@@ -7,6 +7,9 @@ import axios from 'axios';
 import { Header, Footer } from '@/components/index';
 import { formatCurrency } from '@/lib/utils';
 import getStripe from '@/lib/get-stripe';
+import Autocomplete from "@mui/material/Autocomplete";
+import Grid from "@mui/material/Grid";
+import TextField from "@mui/material/TextField";
 import {
   XCircleIcon,
   XIcon,
@@ -15,6 +18,11 @@ import {
 } from '@heroicons/react/outline';
 
 const Cart = () => {
+
+  const [data21, setData21] = useState();
+  const setValues21 = (event, value) => setData21(value);
+
+
   const { cartDetails, totalPrice, cartCount, addItem, removeItem, clearCart } =
     useShoppingCart();
   const [redirecting, setRedirecting] = useState(false);
@@ -27,8 +35,9 @@ const Cart = () => {
       items: Object.entries(cartDetails).map(([_, { id, quantity }]) => ({
         price: id,
         quantity,
-        
       })),
+      shipping: data21 === 'Free - Victoria - Any 6+ bottles' ? 'shr_1JvUdAEZ0lUugcxDWjDXy6sl' : data21 === 'Outside Melbourne Metro' ? 'shr_1JvUVQEZ0lUugcxDt2EBqIH8' : 'shr_1JvUUCEZ0lUugcxDG5y9e8Qf'
+
     });
 
     // Redirect to checkout
@@ -139,10 +148,24 @@ const Cart = () => {
                   {formatCurrency(totalPrice)}
                 </span>
               </p>
-
+              <Grid item xs={12}>
+              <Autocomplete
+                fullWidth
+                disablePortal
+                id="combo-box-demo"
+                onChange={setValues21}
+                options={["Free - Victoria - Any 6+ bottles", "Melbourne Metro", "Outside Melbourne Metro"]}
+                sx={{ width: 320 }}
+                renderInput={(params) => (
+                  <Grid item xs={12}>
+                    <TextField required fullwidth {...params} label="Shipping" />
+                  </Grid>
+                )}
+              />
+              </Grid>
               <button
                 onClick={redirectToCheckout}
-                disabled={redirecting}
+                disabled={redirecting || !data21}
                 className="border rounded py-2 px-6 bg-rose-500 hover:bg-rose-600 border-rose-500 hover:border-rose-600 focus:ring-4 focus:ring-opacity-50 focus:ring-rose-500 text-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-rose-500 max-w-max mt-4"
               >
                 {redirecting ? 'Redirecting...' : 'Go to Checkout'}

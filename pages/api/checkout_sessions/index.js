@@ -4,13 +4,17 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
+    const arr = []
+    arr.push(req.body.shipping)
+    console.log(arr)
+
     try {
       const session = await stripe.checkout.sessions.create({
         mode: 'payment',
         payment_method_types: ['card'],
         line_items: req?.body?.items ?? [],
         allow_promotion_codes: true,
-        shipping_rates: ['shr_1JvUUCEZ0lUugcxDG5y9e8Qf'],
+        shipping_rates: arr,
         shipping_address_collection: {
           allowed_countries: ['AU'],
         },
